@@ -6,6 +6,7 @@
 - SQL Playground
 - What Is SQL?
 - What Is A Query?
+- Exercise: Setting Up Your First Database
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -28,6 +29,9 @@ FROM users -- this is a clause
 WHERE (5 + 10) < login_count>; -- this is a filtering clause
 -- 'WHERE' is a keyword; '(5 + 10)' is an expression; '(5 + 10) < login_count' is a condition
 ```
+
+### [Db-Fiddle > Query Exercise](https://www.db-fiddle.com/f/7fnLq7sZNknYPfm6U2xEAH/0)
+### [Db-Fiddle > Query Solution](https://www.db-fiddle.com/f/sTq8m5ty2h8RdP3YRJqB9L/0)
 
 ## Lesson Title
 

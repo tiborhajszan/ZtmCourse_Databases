@@ -7,6 +7,7 @@
 - What Is SQL?
 - What Is A Query?
 - Exercise: Setting Up Your First Database
+- Imperative vs Declarative
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -31,7 +32,14 @@ WHERE (5 + 10) < login_count>; -- this is a filtering clause
 ```
 
 ### [Db-Fiddle > Query Exercise](https://www.db-fiddle.com/f/7fnLq7sZNknYPfm6U2xEAH/0)
+
 ### [Db-Fiddle > Query Solution](https://www.db-fiddle.com/f/sTq8m5ty2h8RdP3YRJqB9L/0)
+
+### Imperative Programming
+Imperative programming is a coding paradigm where the developer provides the computer with a specific sequence of steps to follow to reach a desired outcome. It focuses on **how** a task should be performed by explicitly describing the logic of the program. **Examples of Imperative Languages:** C++, Java, Python.
+
+### Declarative Programming
+Declarative programming is a coding paradigm where you describe **what** you want to achieve rather than providing a specific sequence of instructions on how to do it. The underlying system or language handles the "how" (the specific logic and control flow) freeing the developer to focus on the desired outcome. **Examples of Declarative Languages:** SQL, HTML, CSS.
 
 ## Lesson Title
 

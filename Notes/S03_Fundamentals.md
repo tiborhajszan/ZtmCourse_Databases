@@ -1,6 +1,6 @@
 # Section 03 | Databases + SQL Fundamentals
 
-<span style="color: #ED7D31;">**ZtM Academy | Complete SQL + Databases Bootcamp | Zero to Mastery**</span>
+<span style="color: #ED7D31;">**ZtM Academy | Complete SQL And Databases Bootcamp | Zero to Mastery**</span>
 
 #### Lessons
 - SQL Playground
@@ -9,6 +9,7 @@
 - Exercise: Setting Up Your First Database
 - Imperative vs Declarative
 - History of SQL
+- Exercises: The Select Statement
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -44,6 +45,9 @@ Declarative programming is a coding paradigm where you describe **what** you wan
 
 ### Brief History of SQL
 SQL was founded on the Relational Model introduced by IBM scientist Edgar F. "Ted" Codd in 1970, which proposed organizing data into structured tables. Using Codd's theories, Donald D. Chamberlin and Raymond F. Boyce created the language (originally called SEQUEL) in the early 1970s at IBM to make database interaction more intuitive. Their goal was to provide an English-like syntax that allowed users to manage and query data without needing to write complex procedural code or understand the underlying computer hardware.
+
+### [W3 Schools > SQL Exercises](https://www.w3schools.com/sql/sql_exercises.asp)
+
 ## Lesson Title
 
 ## Lesson Title

@@ -10,6 +10,7 @@
 - Imperative vs Declarative
 - History of SQL
 - Exercises: The Select Statement
+- Optional: History of SQL Deep Dive
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -43,10 +44,12 @@ Imperative programming is a coding paradigm where the developer provides the com
 ### Declarative Programming
 Declarative programming is a coding paradigm where you describe **what** you want to achieve rather than providing a specific sequence of instructions on how to do it. The underlying system or language handles the "how" (the specific logic and control flow) freeing the developer to focus on the desired outcome. **Examples of Declarative Languages:** SQL, HTML, CSS.
 
-### Brief History of SQL
-SQL was founded on the Relational Model introduced by IBM scientist Edgar F. "Ted" Codd in 1970, which proposed organizing data into structured tables. Using Codd's theories, Donald D. Chamberlin and Raymond F. Boyce created the language (originally called SEQUEL) in the early 1970s at IBM to make database interaction more intuitive. Their goal was to provide an English-like syntax that allowed users to manage and query data without needing to write complex procedural code or understand the underlying computer hardware.
+### Evolution of Databases and SQL
+The journey of computerized data management began in the mid-1960s with the transition from the simple flat file data storage model to IBM’s hierarchical model and Charles Bachman’s network model at GE. This landscape shifted dramatically in 1970 when IBM’s Ted Codd and CJ Date introduced the relational model, which Michael Stonebraker used to develop the INGRES database at Berkeley in 1973. By 1975, IBM researchers Don Chamberlin and Raymond Boyce developed the SQL language (originally SEQUEL) for IBM’s System R to bring the relational theory to life, eventually leading Larry Ellison, Bob Miner, and Ed Oates to release Oracle in 1979, followed by IBM’s own DB2 in 1983.
 
 ### [W3 Schools > SQL Exercises](https://www.w3schools.com/sql/sql_exercises.asp)
+
+### [YouTube > History of Databases](https://www.youtube.com/watch?v=KG-mqHoXOXY)
 
 ## Lesson Title
 

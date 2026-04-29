@@ -11,6 +11,7 @@
 - History of SQL
 - Exercises: The Select Statement
 - Optional: History of SQL Deep Dive
+- SQL Standards
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -50,6 +51,10 @@ The journey of computerized data management began in the mid-1960s with the tran
 ### [W3 Schools > SQL Exercises](https://www.w3schools.com/sql/sql_exercises.asp)
 
 ### [YouTube > History of Databases](https://www.youtube.com/watch?v=KG-mqHoXOXY)
+
+### SQL Standardization
+
+Standardization is the process of establishing a common set of technical rules, known as standards, to ensure that different systems can work together reliably. In the context of SQL, official standards are maintained by organizations like ANSI and ISO to provide a consistent blueprint for the language across different database vendors. While these standards ensure core portability, many vendors add proprietary extensions—often called dialects—to provide specialized functionality that goes beyond the official requirements.
 
 ## Lesson Title
 

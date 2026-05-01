@@ -13,6 +13,7 @@
 - Optional: History of SQL Deep Dive
 - SQL Standards
 - What Is A Database? Revisited
+- Database Oriented Approach
 
 ### [Db-Fiddle](https://www.db-fiddle.com/)
 <span style="color: #3c9dff;">An SQL playground and online database management system.</span>
@@ -54,14 +55,18 @@ The journey of computerized data management began in the mid-1960s with the tran
 ### [YouTube > History of Databases](https://www.youtube.com/watch?v=KG-mqHoXOXY)
 
 ### SQL Standardization
-
 Standardization is the process of establishing a common set of technical rules, known as standards, to ensure that different systems can work together reliably. In the context of SQL, official standards are maintained by organizations like ANSI and ISO to provide a consistent blueprint for the language across different database vendors. While these standards ensure core portability, many vendors add proprietary extensions—often called dialects—to provide specialized functionality that goes beyond the official requirements.
 
-### Limitations of the Flat File Model
+### Limitations of the Flat File Data Storage Model
+- **Data Redundancy and Inefficiency:** Because flat files lack a way to create relationships between different sets of data, information is often duplicated across files, leading to slow, manual searches and tedious update processes.
+- **Lack of Centralized Control:** Without a central management system, there is no way to handle concurrent access by multiple users, which poses a significant risk to data integrity and security.
+- **Poor System Connectivity:** Since each program relies on its own custom file structures and specific logic, it is extremely difficult for different systems to share or connect data with one another.
 
-The flat file model is severely limited by data redundancy and a lack of relationships, as information must be duplicated across multiple files rather than linked efficiently. Because every program must manage its own file structure, these systems also struggle with data integrity and offer no built-in way to handle concurrent access by multiple users. This lack of centralized control makes searching and updating data a slow, manual process that is highly prone to errors.
-
-## Lesson Title
+### Database Oriented Approach
+- **Centralized Management:** The Database Management System (DBMS) acts as a specialized software layer that defines the database model, i.e., manages complex data structures, and establishes logical relationships between datasets.
+- **Rule Enforcement, Security, and Connectivity:** The DBMS automatically enforces data integrity, controls concurrent access for multiple users, maintains robust security protocols, and provides a standardized interface for connecting different applications.
+- **Role of SQL:** SQL serves as the standardized language that allows both humans and applications to communicate with the DBMS, providing a consistent way to query and manipulate data regardless of the underlying database system.
+- **Decoupling Data from Applications:** This approach separates the data storage logic from the application code, allowing database engineers to optimize storage and application developers to focus on features without worrying about data management.
 
 ## Lesson Title
 

@@ -1,9 +1,9 @@
-# Section xx | Section Title
+# Section 05 | SQL Deep Dive
 
 <span style="color: #ED7D31;">**ZtM Academy | Complete SQL + Databases Bootcamp | Zero to Mastery**</span>
 
 #### Lessons
-- xXx
+- Query Along
 
 ## Lesson Title
 

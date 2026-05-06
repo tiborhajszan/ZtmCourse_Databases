@@ -5,6 +5,7 @@
 #### Lessons
 - Query Along
 - Starting With Query
+- Exercise: Simple Queries
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including **DCL** (Data Control Language) for managing permissions, **DDL** (Data Definition Language) for defining structures, **DML** (Data Manipulation Language) for modifying records, and **DQL** (Data Query Language) for fetching data.
@@ -13,11 +14,9 @@ SQL commands are organized into functional groups including **DCL** (Data Contro
 - **Role of DQL:** The Data Query Language is centered around the `SELECT` statement, which is the most frequently used command in SQL.
 - **Purpose of `SELECT`:** The primary purpose of the `SELECT` statement is to retrieve and read data from a database without changing the underlying data.
 
-#### `SELECT` Statement Example:</br></br>
+### Select Everything</br></br>
 ```sql
-SELECT first_name, email 
-FROM users
-WHERE country = 'Mexico';
+SELECT * FROM "schema"."table"; -- returns all data from a table
 ```
 
 ## Lesson Title

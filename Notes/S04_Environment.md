@@ -5,6 +5,7 @@
 #### Lessons
 - Why PostgreSQL
 - Environment Tooling
+- Having Trouble Registering A Serial Key For ValentinaDB?
 
 ### Course Tooling
 During this course, the instructor uses PostgreSQL as the database management system, and ValentinaDB as the UI for PostgreSQL.
@@ -16,10 +17,13 @@ During this course, the instructor uses PostgreSQL as the database management sy
 - Password: your_password
 
 ### [EnterpriseDB > PostgreSQL](https://www.enterprisedb.com/)
-<span style="color: #3c9dff;">PostgreSQL is a highly regarded and widely adopted open source database management system.</span>
+<span style="color: #3c9dff;">PostgreSQL is a highly regarded and widely adopted open source relational database management system.</span>
 
 ### [Valentina Studio](https://www.valentina-db.com/en/)
 <span style="color: #3c9dff;">Valentina Studio is a free UI for several database management systems.</span>
+
+### [Valentina Studio > Obtaining Licenses](https://valentina-db.com/en/get-free-valentina-studio)
+<span style="color: #3c9dff;">You can request a free license key for Valentina Studio here.</span>
 
 ## Lesson Title
 

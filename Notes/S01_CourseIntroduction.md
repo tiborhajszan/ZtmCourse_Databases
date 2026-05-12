@@ -4,6 +4,10 @@
 
 #### Lessons
 - Exercise: Meet Your Classmates and Instructor
+- Understanding Your Video Player
+
+### Video Player Features
+Settings (Gear) > Autoplay, Settings (Gear) > Autocomplete, Complete and Continue, Subtitles, Notes, Video Settings > Quality, Video Settings > Speed, 
 
 ### Course Discord Channel
 <span>#databases</span>  

@@ -8,6 +8,7 @@
 - Exercise: Simple Queries
 - Changing Column Names in a SELECT Query
 - Concat Function
+- What Is A Function In SQL?
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -32,10 +33,14 @@ SELECT "column1", "column2" FROM "schema"."table";
 SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 ```
 
-### `CONCAT` Function
+### SQL Functions
+- **Aggregate Functions:** Combine multiple records (e.g., all values in a column) and return a single aggregated value (e.g., `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`).
+- **Scalar Functions:** Like the `map()` function in Python, they operate on each record individually and return multiple corresponding values (e.g., `CONCAT()`, `LENGTH()`, `UPPER()`).
+
+### `CONCAT()` Function
 ```sql
 -- concatenating columns
-SELECT CONCAT("column1", "column2") AS "concatenated_column" FROM "schema"."table";
+SELECT CONCAT("column1", " ", "column2") AS "concatenated_column" FROM "schema"."table";
 ```
 
 ## Lesson Title

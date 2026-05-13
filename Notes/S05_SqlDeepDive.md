@@ -9,6 +9,7 @@
 - Changing Column Names in a SELECT Query
 - Concat Function
 - What Is A Function In SQL?
+- Aggregate Functions
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -40,11 +41,30 @@ SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 ### `CONCAT()` Function
 ```sql
 -- concatenating columns
-SELECT CONCAT("column1", " ", "column2") AS "concatenated_column" FROM "schema"."table";
+SELECT CONCAT("column1", ' ', "column2") AS "concatenated_column" FROM "schema"."table";
 ```
 
-## Lesson Title
+### Aggregate Function Examples
+```sql
+-- calculating the average of a set of values
+SELECT AVG("column") FROM "schema"."table";
 
-<span style="color: #3c9dff;">Resource explanation.</span>
+-- counting the total number of records in a column
+SELECT COUNT("column") FROM "schema"."table";
+
+-- finding the minimum value in a set of values
+SELECT MIN("column") FROM "schema"."table";
+
+-- finding the maximum value in a set of values
+SELECT MAX("column") FROM "schema"."table";
+
+-- calculating the sum of a set of values
+SELECT SUM("column") FROM "schema"."table";
+```
+
+## Resources
+
+### [PostgreSQL Documentation > Aggregate Functions](https://www.postgresql.org/docs/12/functions-aggregate.html)
+<span style="color: #3c9dff;">Reference for aggregate functions available in PostgreSQL.</span>
 
 ---

@@ -6,9 +6,11 @@
 - Why PostgreSQL
 - Environment Tooling
 - Having Trouble Registering A Serial Key For ValentinaDB?
+- SQL Tooling Alternatives
 
 ### Course Tooling
-During this course, the instructor uses PostgreSQL as the database management system, and ValentinaDB as the UI for PostgreSQL.
+- **PostgreSQL:** Highly regarded and widely adopted open source relational database management system.
+- **Valentina Studio:** Free UI for several database management systems, including PostgreSQL.
 
 ### PostgreSQL Setup
 - URL: localhost (127.0.0.1)
@@ -16,15 +18,31 @@ During this course, the instructor uses PostgreSQL as the database management sy
 - Username: postgres
 - Password: your_password
 
-### [EnterpriseDB > PostgreSQL](https://www.enterprisedb.com/)
-<span style="color: #3c9dff;">PostgreSQL is a highly regarded and widely adopted open source relational database management system.</span>
+## Resources
+
+<div style="color: navajowhite; font-weight: bold;">
+
+EnterpriseDB > PostgreSQL [🔗](https://www.enterprisedb.com/)
 
 ### [Valentina Studio](https://www.valentina-db.com/en/)
-<span style="color: #3c9dff;">Valentina Studio is a free UI for several database management systems.</span>
+<span style="color: #3c9dff;"></span>
 
 ### [Valentina Studio > Obtaining Licenses](https://valentina-db.com/en/get-free-valentina-studio)
 <span style="color: #3c9dff;">You can request a free license key for Valentina Studio here.</span>
 
-## Lesson Title
+Alternatives > PgAdmin [🔗](https://www.pgadmin.org/)
+
+Alternatives > DataGrip [🔗](https://www.jetbrains.com/datagrip/)
+
+Alternatives > DBeaver [🔗](https://dbeaver.io/)
+
+Alternatives > Falcon by Plotly [🔗](https://github.com/plotly/falcon)
+
+Alternatives > DbVisualizer [🔗](https://www.dbvis.com/)
+
+Alternatives > TablePlus [🔗](https://tableplus.com/)
+
+</div>
+
 
 ---

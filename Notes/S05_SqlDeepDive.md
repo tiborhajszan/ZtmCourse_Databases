@@ -10,6 +10,7 @@
 - Concat Function
 - What Is A Function In SQL?
 - Aggregate Functions
+- Exercise: Aggregate Functions
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -22,7 +23,7 @@ SQL commands are organized into functional groups including
 - **Role of DQL:** The Data Query Language is centered around the `SELECT` statement, which is the most frequently used command in SQL.
 - **Purpose of `SELECT`:** The primary purpose of the `SELECT` statement is to retrieve data from a database without changing the underlying data.
 
-### `SELECT` Syntax
+### SELECT Syntax
 ```sql
 -- returning all data from a table
 SELECT * FROM "schema"."table";
@@ -38,7 +39,7 @@ SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 - **Aggregate Functions:** Combine multiple records (e.g., all values in a column) and return a single aggregated value (e.g., `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`).
 - **Scalar Functions:** Like the `map()` function in Python, they operate on each record individually and return multiple corresponding values (e.g., `CONCAT()`, `LENGTH()`, `UPPER()`).
 
-### `CONCAT()` Function
+### CONCAT() Function
 ```sql
 -- concatenating columns
 SELECT CONCAT("column1", ' ', "column2") AS "concatenated_column" FROM "schema"."table";
@@ -64,7 +65,18 @@ SELECT SUM("column") FROM "schema"."table";
 
 ## Resources
 
-### [PostgreSQL Documentation > Aggregate Functions](https://www.postgresql.org/docs/12/functions-aggregate.html)
-<span style="color: #3c9dff;">Reference for aggregate functions available in PostgreSQL.</span>
+<div style="color: navajowhite; font-weight: bold;">
+
+PostgreSQL Aggregate Functions [🔗](https://www.postgresql.org/docs/12/functions-aggregate.html)
+
+</div>
+
+## Exercises
+
+<div style="color: navajowhite; font-weight: bold;">
+
+Aggregate Functions > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
+
+</div>
 
 ---

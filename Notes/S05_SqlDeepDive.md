@@ -11,6 +11,7 @@
 - What Is A Function In SQL?
 - Aggregate Functions
 - Exercise: Aggregate Functions
+- Commenting Your Queries
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -63,11 +64,24 @@ SELECT MAX("column") FROM "schema"."table";
 SELECT SUM("column") FROM "schema"."table";
 ```
 
+### SQL Commenting Syntax
+
+```sql
+-- this is a single-line comment
+
+/*
+this is a
+multi-line comment
+*/
+```
+
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
 
 PostgreSQL Aggregate Functions [🔗](https://www.postgresql.org/docs/12/functions-aggregate.html)
+
+Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
 
 </div>
 

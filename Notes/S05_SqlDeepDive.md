@@ -12,6 +12,7 @@
 - Aggregate Functions
 - Exercise: Aggregate Functions
 - Commenting Your Queries
+- Common SELECT Mistakes
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -65,7 +66,6 @@ SELECT SUM("column") FROM "schema"."table";
 ```
 
 ### SQL Commenting Syntax
-
 ```sql
 -- this is a single-line comment
 
@@ -74,6 +74,12 @@ this is a
 multi-line comment
 */
 ```
+
+### Common SELECT Mistakes
+- **Misspelling:** Column names, table names, schema names, or any identifier.
+- **Commas vs Semicolons:** Commas are used to separate list items like multiple columns or multiple values, while semicolons are used to close individual SQL statements.
+- **Single Quotes vs Double Quotes:** Single quotes are used for string literals, while double quotes are used for identifiers (column names, table names, schema names, etc.).
+- **Invalid Column Names:** A column name should follow the rules of the SQL identifier naming convention. It should start with a letter, underscore, or dollar sign, and consist of alphanumeric characters, underscores, or dollar signs.
 
 ## Resources
 

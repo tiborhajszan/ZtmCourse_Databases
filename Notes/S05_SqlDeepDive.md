@@ -14,6 +14,7 @@
 - Commenting Your Queries
 - Common SELECT Mistakes
 - Filtering Data
+- AND and OR
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -80,6 +81,16 @@ The primary purpose of most SQL queries is to retrieve only a subset of the data
 ```sql
 -- filtering data
 SELECT * FROM "schema"."table" WHERE "column" = 'value';
+```
+
+### Logical Operators
+Any number of filtering criteria can be combined with logical operators.
+- **AND:** Chains multiple conditions together combinig their effect.
+- **OR:** Always starts a new filter, i.e., starts from the full table.
+```sql
+-- filtering data with multiple conditions
+SELECT * FROM "schema"."table" WHERE "column1" = 'value1' AND "column2" = 'value2';
+SELECT * FROM "schema"."table" WHERE "column1" = 'value1' OR "column1" = 'value2';
 ```
 
 ## Resources

@@ -15,6 +15,7 @@
 - Common SELECT Mistakes
 - Filtering Data
 - AND and OR
+- Exercise: Filtering Data
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -85,12 +86,17 @@ SELECT * FROM "schema"."table" WHERE "column" = 'value';
 
 ### Logical Operators
 Any number of filtering criteria can be combined with logical operators.
-- **AND:** Chains multiple conditions together combinig their effect.
-- **OR:** Always starts a new filter, i.e., starts from the full table.
+- **`AND`:** Creates an intersection of filter results, i.e., returns only those records that satisfy both conditions.
+- **`OR`:** Creates a union of filter results, i.e., returns all records that satisfy at least one of the conditions.
+- **Scope:** `AND` works on the outcome of the previous filter, while `OR` starts a new filter tree, i.e., works on the full dataset.
+- **Parentheses `()`:** Override the execution order of operators.
 ```sql
 -- filtering data with multiple conditions
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' AND "column2" = 'value2';
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' OR "column1" = 'value2';
+-- AND works on the outcome of the filter within the parentheses
+SELECT * FROM "schema"."table"
+WHERE ("column1" = 'value1' OR "column2" = 'value2') AND "column3" = 'value3';
 ```
 
 ## Resources

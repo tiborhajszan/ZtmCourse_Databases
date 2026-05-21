@@ -16,6 +16,7 @@
 - Filtering Data
 - AND and OR
 - Exercise: Filtering Data
+- The NOT Keyword
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -88,15 +89,17 @@ SELECT * FROM "schema"."table" WHERE "column" = 'value';
 Any number of filtering criteria can be combined with logical operators.
 - **`AND`:** Creates an intersection of filter results, i.e., returns only those records that satisfy both conditions.
 - **`OR`:** Creates a union of filter results, i.e., returns all records that satisfy at least one of the conditions.
-- **Scope:** `AND` works on the outcome of the previous filter, while `OR` starts a new filter tree, i.e., works on the full dataset.
+- **`NOT`:** Negates a condition, i.e., returns all records that do not satisfy the condition.
+- **Scope:** `AND` works on the output of the filter before it, `OR` starts a new filter tree, i.e., works on the full dataset, and `NOT` inverts the output of the filter after it.
 - **Parentheses `()`:** Override the execution order of operators.
 ```sql
 -- filtering data with multiple conditions
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' AND "column2" = 'value2';
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' OR "column1" = 'value2';
--- AND works on the outcome of the filter within the parentheses
+SELECT * FROM "schema"."table" WHERE NOT "column1" = 'value1' AND NOT "column2" = 'value2';
+-- AND works on the output of the filter within the parentheses
 SELECT * FROM "schema"."table"
-WHERE ("column1" = 'value1' OR "column2" = 'value2') AND "column3" = 'value3';
+WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 ```
 
 ## Resources

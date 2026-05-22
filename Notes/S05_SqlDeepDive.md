@@ -17,6 +17,7 @@
 - AND and OR
 - Exercise: Filtering Data
 - The NOT Keyword
+- Exercise: The Where Clause
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -96,7 +97,7 @@ Any number of filtering criteria can be combined with logical operators.
 -- filtering data with multiple conditions
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' AND "column2" = 'value2';
 SELECT * FROM "schema"."table" WHERE "column1" = 'value1' OR "column1" = 'value2';
-SELECT * FROM "schema"."table" WHERE NOT "column1" = 'value1' AND NOT "column2" = 'value2';
+SELECT * FROM "schema"."table" WHERE NOT "column1" = 'value1' AND NOT "column1" = 'value2';
 -- AND works on the output of the filter within the parentheses
 SELECT * FROM "schema"."table"
 WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
@@ -117,6 +118,8 @@ Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/datab
 <div style="color: navajowhite; font-weight: bold;">
 
 Aggregate Functions > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
+
+WHERE Clause [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
 
 </div>
 

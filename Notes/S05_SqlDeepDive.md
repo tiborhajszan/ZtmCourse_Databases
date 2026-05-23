@@ -18,6 +18,7 @@
 - Exercise: Filtering Data
 - The NOT Keyword
 - Exercise: The Where Clause
+- Comparison Operators
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -94,14 +95,27 @@ Any number of filtering criteria can be combined with logical operators.
 - **Scope:** `AND` works on the output of the filter before it, `OR` starts a new filter tree, i.e., works on the full dataset, and `NOT` inverts the output of the filter after it.
 - **Parentheses `()`:** Override the execution order of operators.
 ```sql
--- filtering data with multiple conditions
-SELECT * FROM "schema"."table" WHERE "column1" = 'value1' AND "column2" = 'value2';
-SELECT * FROM "schema"."table" WHERE "column1" = 'value1' OR "column1" = 'value2';
-SELECT * FROM "schema"."table" WHERE NOT "column1" = 'value1' AND NOT "column1" = 'value2';
--- AND works on the output of the filter within the parentheses
+-- filter chaining with AND
+SELECT * FROM "schema"."table"
+WHERE "column1" = 'value1' AND "column2" = 'value2';
+-- filter combination with OR
+SELECT * FROM "schema"."table"
+WHERE "column1" = 'value1' OR "column1" = 'value2';
+-- filter negation with NOT
+SELECT * FROM "schema"."table"
+WHERE NOT "column1" = 'value1' AND NOT "column1" = 'value2';
+-- AND works on the filter combination within the parentheses
 SELECT * FROM "schema"."table"
 WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 ```
+
+### SQL Comparison Operators
+- **`=`:** Equal to.
+- **`!=` or `<>`:** Not equal to.
+- **`>`:** Greater than.
+- **`<`:** Less than.
+- **`>=`:** Greater than or equal to.
+- **`<=`:** Less than or equal to.
 
 ## Resources
 
@@ -110,6 +124,8 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 PostgreSQL Aggregate Functions [🔗](https://www.postgresql.org/docs/12/functions-aggregate.html)
 
 Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
+
+PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/docs/current/functions-comparison.html)
 
 </div>
 

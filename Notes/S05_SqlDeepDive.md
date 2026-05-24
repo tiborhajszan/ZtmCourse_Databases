@@ -19,6 +19,7 @@
 - The NOT Keyword
 - Exercise: The Where Clause
 - Comparison Operators
+- Exercise: Comparison Operators
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -92,7 +93,7 @@ Any number of filtering criteria can be combined with logical operators.
 - **`AND`:** Creates an intersection of filter results, i.e., returns only those records that satisfy both conditions.
 - **`OR`:** Creates a union of filter results, i.e., returns all records that satisfy at least one of the conditions.
 - **`NOT`:** Negates a condition, i.e., returns all records that do not satisfy the condition.
-- **Scope:** `AND` works on the output of the filter before it, `OR` starts a new filter tree, i.e., works on the full dataset, and `NOT` inverts the output of the filter after it.
+- **Scope:** `AND` works on the output of the filter before it; `OR` starts a new filter tree, i.e., works on the full dataset; and `NOT` inverts the output of the filter after it.
 - **Parentheses `()`:** Override the execution order of operators.
 ```sql
 -- filter chaining with AND
@@ -110,12 +111,12 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 ```
 
 ### SQL Comparison Operators
-- **`=`:** Equal to.
-- **`!=` or `<>`:** Not equal to.
-- **`>`:** Greater than.
-- **`<`:** Less than.
-- **`>=`:** Greater than or equal to.
-- **`<=`:** Less than or equal to.
+- **`=` :** Equal to.
+- **`!=` or `<>` :** Not equal to.
+- **`>` :** Greater than.
+- **`<` :** Less than.
+- **`>=` :** Greater than or equal to.
+- **`<=` :** Less than or equal to.
 
 ## Resources
 
@@ -136,6 +137,8 @@ PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/
 Aggregate Functions > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
 
 WHERE Clause [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
+
+Comparison Operators > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/answers.sql) | DB Fiddle [🔗](https://www.db-fiddle.com/f/upmzr6GdKYgJew2aXNrLpE/0)
 
 </div>
 

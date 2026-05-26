@@ -21,6 +21,7 @@
 - Comparison Operators
 - Exercise: Comparison Operators
 - Logical Operators
+- Operator Precedence
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -83,19 +84,19 @@ multi-line comment
 - **Commas vs Semicolons:** Commas are used to separate list items like multiple columns or multiple values, while semicolons are used to close individual SQL statements.
 
 ### Data Filtering
-The primary purpose of most SQL queries is to retrieve only a subset of the data from a database. This is achieved through the `WHERE` keyword/clause, which allows you to specify the filtering criteria.
+The primary purpose of most SQL queries is to retrieve only a subset of the data from a database. This is achieved through the `WHERE` keyword/clause, which allows you to specify the filtering criteria.<br><br>
+
 ```sql
 -- filtering data
 SELECT * FROM "schema"."table" WHERE "column" = 'value';
 ```
 
-### Logical Operators
-Any number of filtering criteria can be combined with logical operators.
+### SQL Logical Operators
 - **`AND`:** Creates an intersection of filter results, i.e., returns only those records that satisfy both conditions.
 - **`OR`:** Creates a union of filter results, i.e., returns all records that satisfy at least one of the conditions.
 - **`NOT`:** Negates a condition, i.e., returns all records that do not satisfy the condition.
-- **Scope:** `AND` works on the output of the filter before it; `OR` starts a new filter tree, i.e., works on the full dataset; and `NOT` inverts the output of the filter after it.
-- **Parentheses `()`:** Override the execution order of operators.
+- **Scope:** `AND` works on the output of the filter before it; `OR` starts a new filter tree, i.e., works on the full dataset; and `NOT` inverts the output of the filter after it.<br><br>
+
 ```sql
 -- filter chaining with AND
 SELECT * FROM "schema"."table"
@@ -119,10 +120,27 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 - **`>=` :** Greater than or equal to.
 - **`<=` :** Less than or equal to.
 
-### Order of Filter Operations
-- **FROM:** Starting with the full table/dataset.
-- **WHERE:** Filtering the dataset based on certain conditions.
-- **SELECT:** Returning the filtered records.
+### `SELECT` Operation Order
+1. **FROM:** Starting with the full table/dataset.
+2. **WHERE:** Filtering the dataset based on certain conditions.
+3. **SELECT:** Returning the filtered records.
+
+### Operator Precedence
+1. **Parentheses** `()`
+2. **Unary operators** `+`, `-`, `~`, `NOT`
+3. **Exponentiation** `^` (some databases)
+4. **Multiplication, Division, Modulo** `*`, `/`, `%`
+5. **Addition, Subtraction** `+`, `-`
+6. **Comparison operators** `=`, `<>` or `!=`, `<`, `>`, `<=`, `>=`, `BETWEEN`, `IN`, `LIKE`, `IS NULL`, `IS NOT NULL`
+7. **NOT**
+8. **AND**
+9. **`ALL`, `ANY`, `SOME`, `EXISTS`** (in some contexts)
+10. **OR**
+
+### Same Precedence Evaluation Order
+- Operators at the **same precedence level** are evaluated left to right or right to left. Use parentheses to explicitly control evaluation order when needed.
+- **Left-to-Right Evaluation:** Multiplication, division, modulo (`*`, `/`, `%`), addition, subtraction (`+`, `-`), comparison operators (`=`, `<>`, `!=`, `<`, `>`, `<=`, `>=`), `AND`, `OR`, string concatenation (`||`, `CONCAT`), and bitwise operators (`&`, `|`) follow left-to-right associativity when at the same precedence level.
+- **Right-to-Left Evaluation:** Unary operators (`+`, `-`, `~`), exponentiation (`^`), and `NOT` follow right-to-left associativity when at the same precedence level.
 
 ## Resources
 
@@ -133,6 +151,10 @@ PostgreSQL Aggregate Functions [🔗](https://www.postgresql.org/docs/12/functio
 Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
 
 PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/docs/current/functions-comparison.html)
+
+PostgreSQL Operator Precedence [🔗](https://www.postgresql.org/docs/12/sql-syntax-lexical.html#SQL-PRECEDENCE)
+
+PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12/sql-expressions.html#SYNTAX-EXPRESS-EVAL)
 
 </div>
 

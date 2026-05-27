@@ -22,6 +22,7 @@
 - Exercise: Comparison Operators
 - Logical Operators
 - Operator Precedence
+- Operator Precedence 2
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -92,10 +93,9 @@ SELECT * FROM "schema"."table" WHERE "column" = 'value';
 ```
 
 ### SQL Logical Operators
-- **`AND`:** Creates an intersection of filter results, i.e., returns only those records that satisfy both conditions.
-- **`OR`:** Creates a union of filter results, i.e., returns all records that satisfy at least one of the conditions.
-- **`NOT`:** Negates a condition, i.e., returns all records that do not satisfy the condition.
-- **Scope:** `AND` works on the output of the filter before it; `OR` starts a new filter tree, i.e., works on the full dataset; and `NOT` inverts the output of the filter after it.<br><br>
+- **`AND`:** Creates a conjunction of two conditions, i.e., returns only those records that satisfy both conditions. It basically narrows filtering results by applying two filters sequentially where the filter right to `AND` works on the output of the filter left to it.
+- **`OR`:** Creates a disjunction of two conditions, i.e., returns all records that satisfy either condition. It basically widens filtering results by combining/merging the output of two separate filters.
+- **`NOT`:** Negates a condition, i.e., returns all records that do not satisfy the condition. It basically inverts the output of the filter right after `NOT` by removing matching records from the dataset and returning the rest.<br><br>
 
 ```sql
 -- filter chaining with AND

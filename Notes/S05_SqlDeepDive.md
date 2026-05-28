@@ -23,6 +23,7 @@
 - Logical Operators
 - Operator Precedence
 - Operator Precedence 2
+- Operator Precedence Extra
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -126,21 +127,20 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 3. **SELECT:** Returning the filtered records.
 
 ### Operator Precedence
-1. **Parentheses** `()`
-2. **Unary operators** `+`, `-`, `~`, `NOT`
-3. **Exponentiation** `^` (some databases)
-4. **Multiplication, Division, Modulo** `*`, `/`, `%`
-5. **Addition, Subtraction** `+`, `-`
-6. **Comparison operators** `=`, `<>` or `!=`, `<`, `>`, `<=`, `>=`, `BETWEEN`, `IN`, `LIKE`, `IS NULL`, `IS NOT NULL`
+1. **Parentheses `()`**
+2. **Unary Plus `+`, Unary Minus `-`**
+3. **Exponentiation `^`**
+4. **Multiplication `*`, Division `/`, Modulo `%`**
+5. **Addition `+`, Subtraction `-`**
+6. **Comparison Operators `=`, `<>` or `!=`, `<`, `>`, `<=`, `>=`, `BETWEEN`, `IN`, `LIKE`, `IS NULL`, `IS NOT NULL`**
 7. **NOT**
 8. **AND**
-9. **`ALL`, `ANY`, `SOME`, `EXISTS`** (in some contexts)
-10. **OR**
+9. **OR**
 
 ### Same Precedence Evaluation Order
-- Operators at the **same precedence level** are evaluated left to right or right to left. Use parentheses to explicitly control evaluation order when needed.
-- **Left-to-Right Evaluation:** Multiplication, division, modulo (`*`, `/`, `%`), addition, subtraction (`+`, `-`), comparison operators (`=`, `<>`, `!=`, `<`, `>`, `<=`, `>=`), `AND`, `OR`, string concatenation (`||`, `CONCAT`), and bitwise operators (`&`, `|`) follow left-to-right associativity when at the same precedence level.
-- **Right-to-Left Evaluation:** Unary operators (`+`, `-`, `~`), exponentiation (`^`), and `NOT` follow right-to-left associativity when at the same precedence level.
+- Operators at the same precedence level are evaluated left to right or right to left. Use parentheses to explicitly control evaluation order when needed.
+- **Left-to-Right Evaluation:** `()`, `*`, `/`, `%`, `+`, `-`, string concatenation (`||`, `CONCAT()`), `=`, `<>`, `!=`, `<`, `>`, `<=`, `>=`, bitwise operators (`&`, `|`), `AND`, and `OR` follow left-to-right associativity when at the same precedence level.
+- **Right-to-Left Evaluation:** unary `+`, unary `-`, `^`, and `NOT` follow right-to-left associativity when at the same precedence level.
 
 ## Resources
 

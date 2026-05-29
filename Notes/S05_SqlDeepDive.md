@@ -24,6 +24,7 @@
 - Operator Precedence
 - Operator Precedence 2
 - Operator Precedence Extra
+- Exercise: Operator Precedence
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -121,7 +122,7 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 - **`>=` :** Greater than or equal to.
 - **`<=` :** Less than or equal to.
 
-### `SELECT` Operation Order
+### Query (`SELECT`) Operation Order
 1. **FROM:** Starting with the full table/dataset.
 2. **WHERE:** Filtering the dataset based on certain conditions.
 3. **SELECT:** Returning the filtered records.
@@ -166,7 +167,14 @@ Aggregate Functions > Questions [🔗](https://github.com/mobinni/Complete-SQL-D
 
 WHERE Clause [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
 
-Comparison Operators > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/answers.sql) | DB Fiddle [🔗](https://www.db-fiddle.com/f/upmzr6GdKYgJew2aXNrLpE/0)
+Comparison Operators
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/answers.sql)
+- DB Fiddle [🔗](https://www.db-fiddle.com/f/upmzr6GdKYgJew2aXNrLpE/0)
+
+Operator Precedence
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/answers.sql)
 
 </div>
 

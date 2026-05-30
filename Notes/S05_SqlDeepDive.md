@@ -25,6 +25,7 @@
 - Operator Precedence 2
 - Operator Precedence Extra
 - Exercise: Operator Precedence
+- Checking For NULL Values
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -142,6 +143,16 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 - Operators at the same precedence level are evaluated left to right or right to left. Use parentheses to explicitly control evaluation order when needed.
 - **Left-to-Right Evaluation:** `()`, `*`, `/`, `%`, `+`, `-`, string concatenation (`||`, `CONCAT()`), `=`, `<>`, `!=`, `<`, `>`, `<=`, `>=`, bitwise operators (`&`, `|`), `AND`, and `OR` follow left-to-right associativity when at the same precedence level.
 - **Right-to-Left Evaluation:** unary `+`, unary `-`, `^`, and `NOT` follow right-to-left associativity when at the same precedence level.
+
+### NULL Value
+- **Definition:** Records that are not assigned a value are considered empty.
+- **Automatic Assignment:** Most database systems automatically assign a `NULL` value to empty records, which represents the absence of value.
+- **Special Value:** `NULL` is neither zero nor an empty/blank string; it is a distinct marker for missing or unknown data.
+- **Three Principles:** When making records nullable, be careful, mindful, and deliberate.
+  - **Careful:** Allow `NULL` values only where it is absolutely necessary.
+  - **Mindful:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain vital business information.
+  - **Deliberate:** Make conscious decisions about `NULL` values and document your reasoning.
+- **Danger:** `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
 
 ## Resources
 

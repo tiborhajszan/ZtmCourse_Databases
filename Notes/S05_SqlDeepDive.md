@@ -26,6 +26,7 @@
 - Operator Precedence Extra
 - Exercise: Operator Precedence
 - Checking For NULL Values
+- IS Keyword
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -145,14 +146,26 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 - **Right-to-Left Evaluation:** unary `+`, unary `-`, `^`, and `NOT` follow right-to-left associativity when at the same precedence level.
 
 ### NULL Value
-- **Definition:** Records that are not assigned a value are considered empty.
-- **Automatic Assignment:** Most database systems automatically assign a `NULL` value to empty records, which represents the absence of value.
-- **Special Value:** `NULL` is neither zero nor an empty/blank string; it is a distinct marker for missing or unknown data.
-- **Three Principles:** When making records nullable, be careful, mindful, and deliberate.
-  - **Careful:** Allow `NULL` values only where it is absolutely necessary.
-  - **Mindful:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain vital business information.
-  - **Deliberate:** Make conscious decisions about `NULL` values and document your reasoning.
-- **Danger:** `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
+- **Empty Records:** Records that are not assigned a value are considered empty.
+- **NULL Assignment:** Most database systems automatically assign a `NULL` value to empty records, which represents the absence of value.
+- **NULL Value:** `NULL` is neither zero nor an empty/blank string; it is a distinct marker for missing or unknown data.
+- **NULL Principles:**
+  - Be **careful and defensive:** Allow `NULL` values only where it is absolutely essential. Check for and filter out `NULL` values in your queries when necessary.
+  - Be **mindful and rational:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain required business information. But you can allow `NULL` values for columns that are optional or have default values.
+  - Be **deliberate:** Make conscious decisions about `NULL` values and communicate them clearly to your team.
+- <svg style="color: #FF6B6B; width: 1em; height: 1em; vertical-align: text-bottom; margin-right: 4px;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg><span style="color: #FF6B6B;">**Danger:**</span> `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
+
+### IS Keyword
+The `IS` keyword is a special comparison operator that allows us to check for `NULL`, `TRUE`, or `FALSE` values, because the `=` operator cannot be used here. The `IS NOT` keyword is the opposite of the `IS` keyword. As a result, `IS NOT TRUE` is equivalent to `IS FALSE`, and `IS NOT FALSE` is equivalent to `IS TRUE`.<br><br>
+
+```sql
+-- checking for NULL values
+SELECT * FROM "schema"."table" WHERE "column" IS NULL;
+-- checking for TRUE values
+SELECT * FROM "schema"."table" WHERE "boolean_column" IS NOT TRUE;
+-- checking for FALSE values
+SELECT * FROM "schema"."table" WHERE "boolean_column" IS FALSE;
+```
 
 ## Resources
 

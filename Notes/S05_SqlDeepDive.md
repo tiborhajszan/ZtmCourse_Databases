@@ -27,6 +27,7 @@
 - Exercise: Operator Precedence
 - Checking For NULL Values
 - IS Keyword
+- NULL Coalescing
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -148,7 +149,7 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 ### NULL Value
 - **Empty Records:** Records that are not assigned a value are considered empty.
 - **NULL Assignment:** Most database systems automatically assign a `NULL` value to empty records, which represents the absence of value.
-- **NULL Value:** `NULL` is neither zero nor an empty/blank string; it is a distinct marker for missing or unknown data.
+- **NULL Value:** `NULL` is neither zero nor an empty/blank string. It is a distinct marker for missing or unknown data.
 - **NULL Principles:**
   - Be **careful and defensive:** Allow `NULL` values only where it is absolutely essential. Check for and filter out `NULL` values in your queries when necessary.
   - Be **mindful and rational:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain required business information. But you can allow `NULL` values for columns that are optional or have default values.
@@ -165,6 +166,14 @@ SELECT * FROM "schema"."table" WHERE "column" IS NULL;
 SELECT * FROM "schema"."table" WHERE "boolean_column" IS NOT TRUE;
 -- checking for FALSE values
 SELECT * FROM "schema"."table" WHERE "boolean_column" IS FALSE;
+```
+
+### NULL Coalescing
+When working with datasets that may contain `NULL`, we should substitute `NULL` values with a default value using the `COALESCE()` function. The `COALESCE()` function returns the first non-`NULL` value from the list of its arguments.<br><br>
+
+```sql
+-- returning the first non-NULL value
+SELECT COALESCE("column1", "column2", 'default_value') AS "result" FROM "schema"."table";
 ```
 
 ## Resources

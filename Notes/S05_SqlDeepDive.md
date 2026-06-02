@@ -28,6 +28,7 @@
 - Checking For NULL Values
 - IS Keyword
 - NULL Coalescing
+- Exercise: Null Value Coalescing
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -148,13 +149,13 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 
 ### NULL Value
 - **Empty Records:** Records that are not assigned a value are considered empty.
-- **NULL Assignment:** Most database systems automatically assign a `NULL` value to empty records, which represents the absence of value.
-- **NULL Value:** `NULL` is neither zero nor an empty/blank string. It is a distinct marker for missing or unknown data.
+- **NULL Assignment:** Most database systems automatically assign a `NULL` value to empty records.
+- **NULL Value:** `NULL` is neither zero nor an empty/blank string. It is a distinct marker representing the absence of value.
 - **NULL Principles:**
-  - Be **careful and defensive:** Allow `NULL` values only where it is absolutely essential. Check for and filter out `NULL` values in your queries when necessary.
+  - Be **careful and defensive:** Allow `NULL` values only where it is absolutely essential. Always check for and filter out `NULL` values in your queries.
   - Be **mindful and rational:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain required business information. But you can allow `NULL` values for columns that are optional or have default values.
   - Be **deliberate:** Make conscious decisions about `NULL` values and communicate them clearly to your team.
-- <svg style="color: #FF6B6B; width: 1em; height: 1em; vertical-align: text-bottom; margin-right: 4px;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg><span style="color: #FF6B6B;">**Danger:**</span> `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
+- ⚠️ <span style="color: #FF6B6B;">**Danger:**</span> `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
 
 ### IS Keyword
 The `IS` keyword is a special comparison operator that allows us to check for `NULL`, `TRUE`, or `FALSE` values, because the `=` operator cannot be used here. The `IS NOT` keyword is the opposite of the `IS` keyword. As a result, `IS NOT TRUE` is equivalent to `IS FALSE`, and `IS NOT FALSE` is equivalent to `IS TRUE`.<br><br>
@@ -196,9 +197,12 @@ PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12
 
 <div style="color: navajowhite; font-weight: bold;">
 
-Aggregate Functions > Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql) | Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
+Aggregate Functions
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
 
-WHERE Clause [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
+WHERE Clause
+- W3Schools Exercise [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
 
 Comparison Operators
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql)
@@ -208,6 +212,11 @@ Comparison Operators
 Operator Precedence
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/questions.sql)
 - Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/answers.sql)
+
+NULL Coalescing
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/answers.sql)
+- DB Fiddle [🔗](https://www.db-fiddle.com/f/PnGNcaPYfGoEDvfexzEUA/0)
 
 </div>
 

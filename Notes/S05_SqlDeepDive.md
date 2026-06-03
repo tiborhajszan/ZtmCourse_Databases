@@ -29,6 +29,7 @@
 - IS Keyword
 - NULL Coalescing
 - Exercise: Null Value Coalescing
+- 3 Valued Logic
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -152,8 +153,8 @@ WHERE ("column1" = 'value1' OR "column1" = 'value2') AND "column3" = 'value3';
 - **NULL Assignment:** Most database systems automatically assign a `NULL` value to empty records.
 - **NULL Value:** `NULL` is neither zero nor an empty/blank string. It is a distinct marker representing the absence of value.
 - **NULL Principles:**
-  - Be **careful and defensive:** Allow `NULL` values only where it is absolutely essential. Always check for and filter out `NULL` values in your queries.
-  - Be **mindful and rational:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain required business information. But you can allow `NULL` values for columns that are optional or have default values.
+  - Be **careful and defensive:** Allow `NULL` values only where it is absolutely necessary. Always check for and filter out `NULL` values in your queries.
+  - Be **mindful and rational:** Consider the consequences of allowing `NULL` values. For example, do not allow `NULL` values for columns that are used in calculations or contain essential business information. But you can allow `NULL` values for columns that are optional or have default values.
   - Be **deliberate:** Make conscious decisions about `NULL` values and communicate them clearly to your team.
 - ⚠️ <span style="color: #FF6B6B;">**Danger:**</span> `NULL` is dangerous because whatever operation you perform with `NULL`, the result will always be `NULL`, which may cause all sorts of issues in your applications.
 
@@ -164,9 +165,11 @@ The `IS` keyword is a special comparison operator that allows us to check for `N
 -- checking for NULL values
 SELECT * FROM "schema"."table" WHERE "column" IS NULL;
 -- checking for TRUE values
-SELECT * FROM "schema"."table" WHERE "boolean_column" IS NOT TRUE;
+SELECT * FROM "schema"."table" WHERE "boolean_column" IS TRUE;
+SELECT * FROM "schema"."table" WHERE "boolean_column" IS NOT FALSE;
 -- checking for FALSE values
 SELECT * FROM "schema"."table" WHERE "boolean_column" IS FALSE;
+SELECT * FROM "schema"."table" WHERE "boolean_column" IS NOT TRUE;
 ```
 
 ### NULL Coalescing
@@ -176,6 +179,10 @@ When working with datasets that may contain `NULL`, we should substitute `NULL` 
 -- returning the first non-NULL value
 SELECT COALESCE("column1", "column2", 'default_value') AS "result" FROM "schema"."table";
 ```
+
+### Three Valued Logic
+- **NULL Comparison:** `NULL` can not be compared to anything, including itself. When a boolean expression involves a `NULL` value, the outcome is always `NULL`.
+- **Three Valued Logic:** Most programming languages use two-valued logic (`TRUE` and `FALSE`) and treat the `NULL` outcome of boolean expressions as `FALSE`. On the other hand, SQL uses three-valued logic (`TRUE`, `FALSE`, and `NULL`) to account for the `NULL` outcome of boolean expressions.
 
 ## Resources
 

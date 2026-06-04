@@ -30,6 +30,7 @@
 - NULL Coalescing
 - Exercise: Null Value Coalescing
 - 3 Valued Logic
+- Exercise: 3 Valued Logic
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -224,6 +225,11 @@ NULL Coalescing
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/questions.sql)
 - Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/answers.sql)
 - DB Fiddle [🔗](https://www.db-fiddle.com/f/PnGNcaPYfGoEDvfexzEUA/0)
+
+Three Valued Logic
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/answers.sql)
+
 
 </div>
 

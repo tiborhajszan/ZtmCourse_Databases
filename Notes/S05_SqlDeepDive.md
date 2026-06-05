@@ -31,6 +31,7 @@
 - Exercise: Null Value Coalescing
 - 3 Valued Logic
 - Exercise: 3 Valued Logic
+- BETWEEN + AND
 
 ### SQL Command Categories
 SQL commands are organized into functional groups including
@@ -184,6 +185,18 @@ SELECT COALESCE("column1", "column2", 'default_value') AS "result" FROM "schema"
 ### Three Valued Logic
 - **NULL Comparison:** `NULL` can not be compared to anything, including itself. When a boolean expression involves a `NULL` value, the outcome is always `NULL`.
 - **Three Valued Logic:** Most programming languages use two-valued logic (`TRUE` and `FALSE`) and treat the `NULL` outcome of boolean expressions as `FALSE`. On the other hand, SQL uses three-valued logic (`TRUE`, `FALSE`, and `NULL`) to account for the `NULL` outcome of boolean expressions.
+
+### BETWEEN AND Syntax
+The `BETWEEN AND` SQL syntax is a shorthand for an inclusive range filter.<br><br>
+
+```sql
+-- filtering for values within a range (inclusive)
+SELECT "column" FROM "schema"."table"
+WHERE "column" BETWEEN 'value1' AND 'value2';
+-- equivalent using comparison operators
+SELECT "column" FROM "schema"."table"
+WHERE 'value1' <= "column" AND "column" <= 'value2';
+```
 
 ## Resources
 

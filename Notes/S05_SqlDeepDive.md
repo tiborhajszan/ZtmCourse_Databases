@@ -32,12 +32,12 @@
 - 3 Valued Logic
 - Exercise: 3 Valued Logic
 - BETWEEN + AND
+- Exercise: BETWEEN + AND
 
 ### SQL Command Categories
-SQL commands are organized into functional groups including
-- **DCL** (Data Control Language) for managing permissions,
-- **DDL** (Data Definition Language) for defining structures,
-- **DML** (Data Manipulation Language) for modifying records,
+- **DCL** (Data Control Language) for managing permissions.
+- **DDL** (Data Definition Language) for defining structures.
+- **DML** (Data Manipulation Language) for modifying records.
 - **DQL** (Data Query Language) for fetching data.
 
 ### Data Retrieval
@@ -243,6 +243,9 @@ Three Valued Logic
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/questions.sql)
 - Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/answers.sql)
 
+BETWEEN + AND
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/answers.sql)
 
 </div>
 

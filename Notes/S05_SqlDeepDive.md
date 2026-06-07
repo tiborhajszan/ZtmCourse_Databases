@@ -33,6 +33,7 @@
 - Exercise: 3 Valued Logic
 - BETWEEN + AND
 - Exercise: BETWEEN + AND
+- IN Keyword
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -197,6 +198,21 @@ WHERE "column" BETWEEN 'value1' AND 'value2';
 SELECT "column" FROM "schema"."table"
 WHERE 'value1' <= "column" AND "column" <= 'value2';
 ```
+
+### IN Keyword
+The `IN` operator allows us to check if a value matches any member of a comma-separated list. It serves as a concise shorthand for multiple `OR` conditions.<br><br>
+
+```sql
+-- filtering records that match any value in the list
+SELECT * FROM "schema"."table"
+WHERE "column" IN ('value1', 'value2', 'value3');
+-- equivalent using multiple OR conditions
+SELECT * FROM "schema"."table"
+WHERE "column" = 'value1'
+OR "column" = 'value2'
+OR "column" = 'value3';
+```
+
 
 ## Resources
 

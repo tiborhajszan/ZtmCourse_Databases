@@ -34,6 +34,7 @@
 - BETWEEN + AND
 - Exercise: BETWEEN + AND
 - IN Keyword
+- Exercise: IN Keyword
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -263,6 +264,9 @@ BETWEEN + AND
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/questions.sql)
 - Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/answers.sql)
 
+IN Keyword
+- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/IN/questions.sql)
+- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/IN/answers.sql)
 </div>
 
 ---

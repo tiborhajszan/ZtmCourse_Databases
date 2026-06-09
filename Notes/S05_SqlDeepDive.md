@@ -35,6 +35,7 @@
 - Exercise: BETWEEN + AND
 - IN Keyword
 - Exercise: IN Keyword
+- LIKE
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -214,6 +215,22 @@ OR "column" = 'value2'
 OR "column" = 'value3';
 ```
 
+### LIKE Keyword
+The `LIKE` operator facilitates case-sensitive pattern matching using the `%` wildcard for multiple characters and `_` for a single character. `ILIKE` provides a case-insensitive alternative, which is a feature unique to PostgreSQL. Since these operators are designed for text, we must cast non-string columns to text using the `::text` operator or `CAST()` function to perform matching.<br><br>
+
+```sql
+-- case-sensitive pattern matching
+SELECT * FROM "schema"."table"
+WHERE "column" LIKE 'Ali%';
+-- case-insensitive pattern matching
+SELECT * FROM "schema"."table"
+WHERE "column" ILIKE 'smith';
+-- pattern matching with type casting
+SELECT * FROM "schema"."table"
+WHERE "column"::text LIKE '19._%_';
+SELECT * FROM "schema"."table"
+WHERE CAST("column" AS text) LIKE '2023%';
+```
 
 ## Resources
 
@@ -234,10 +251,6 @@ PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-Aggregate Functions
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/exercises.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Aggregate%20Functions/answers.sql)
 
 WHERE Clause
 - W3Schools Exercise [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)

@@ -36,6 +36,7 @@
 - IN Keyword
 - Exercise: IN Keyword
 - LIKE
+- Exercise: Like Keyword
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -251,9 +252,6 @@ PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-WHERE Clause
-- W3Schools Exercise [🔗](https://www.w3schools.com/sql/exercise.asp?x=xrcise_where1)
 
 Comparison Operators
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql)

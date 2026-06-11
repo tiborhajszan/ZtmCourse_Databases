@@ -37,6 +37,7 @@
 - Exercise: IN Keyword
 - LIKE
 - Exercise: Like Keyword
+- Dates And Timezones
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -231,6 +232,17 @@ SELECT * FROM "schema"."table"
 WHERE "column"::text LIKE '19._%_';
 SELECT * FROM "schema"."table"
 WHERE CAST("column" AS text) LIKE '2023%';
+```
+
+### Handling Date and Time
+Handling date and time is challenging because users and data may originate from different time zones. To standardize time across systems, **Coordinated Universal Time (UTC)** is used. UTC is a **time standard**, not a time zone, though it is closely aligned with **Greenwich Mean Time (GMT)**. Modern databases typically store date/time values in UTC and convert them to the user's local time zone when displaying data.
+
+```sql
+-- Display the database time zone
+SHOW timezone;
+
+-- Set the database time zone
+SET timezone = 'UTC';
 ```
 
 ## Resources

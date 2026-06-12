@@ -38,6 +38,7 @@
 - LIKE
 - Exercise: Like Keyword
 - Dates And Timezones
+- Setting Up Timezones
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -235,14 +236,15 @@ WHERE CAST("column" AS text) LIKE '2023%';
 ```
 
 ### Handling Date and Time
-Handling date and time is challenging because users and data may originate from different time zones. To standardize time across systems, **Coordinated Universal Time (UTC)** is used. UTC is a **time standard**, not a time zone, though it is closely aligned with **Greenwich Mean Time (GMT)**. Modern databases typically store date/time values in UTC and convert them to the user's local time zone when displaying data.
+Handling date and time is challenging in software engineering because users and data may originate from different time zones. To standardize time across systems, **Universal Time Coordinate (UTC)** is used. UTC is a **time standard**, not a time zone, though it is closely aligned with **Greenwich Mean Time (GMT)**. Modern databases typically store date and time values in UTC and convert them to the user's local time zone when displaying data.<br><br>
 
 ```sql
--- Display the database time zone
+-- displaying database time zone
 SHOW timezone;
-
--- Set the database time zone
+-- setting database time zone
 SET timezone = 'UTC';
+-- setting user time zone
+ALTER USER "username" SET timezone='UTC';
 ```
 
 ## Resources
@@ -259,16 +261,13 @@ PostgreSQL Operator Precedence [🔗](https://www.postgresql.org/docs/12/sql-syn
 
 PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12/sql-expressions.html#SYNTAX-EXPRESS-EVAL)
 
+Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
+
 </div>
 
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-Comparison Operators
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Comparison%20Operators/answers.sql)
-- DB Fiddle [🔗](https://www.db-fiddle.com/f/upmzr6GdKYgJew2aXNrLpE/0)
 
 Operator Precedence
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/questions.sql)

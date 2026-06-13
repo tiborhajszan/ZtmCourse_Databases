@@ -39,6 +39,7 @@
 - Exercise: Like Keyword
 - Dates And Timezones
 - Setting Up Timezones
+- How Do We Format Date And Time?
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -247,6 +248,11 @@ SET timezone = 'UTC';
 ALTER USER "username" SET timezone='UTC';
 ```
 
+### Datetime Format
+- Similar to UTC being a time standard, **ISO-8601** is a time formatting stardard, specifying how datetime should look in computer systems.
+- The ISO-8601 format is **YYYY-MM-DDTHH:MM:SS+/-HH:MM**, the last tag being the timezone offset. For example, +02:00 is CEST, and -05:00 is EST.
+- Strict adherence to UTC and ISO-8601 ensures interoperability among computer systems.
+
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
@@ -268,10 +274,6 @@ Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyon
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-Operator Precedence
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Operator%20precendence/answers.sql)
 
 NULL Coalescing
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/questions.sql)

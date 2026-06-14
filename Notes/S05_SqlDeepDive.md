@@ -40,6 +40,7 @@
 - Dates And Timezones
 - Setting Up Timezones
 - How Do We Format Date And Time?
+- Timestamps
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -252,6 +253,12 @@ ALTER USER "username" SET timezone='UTC';
 - Similar to UTC being a time standard, **ISO-8601** is a time formatting stardard, specifying how datetime should look in computer systems.
 - The ISO-8601 format is **YYYY-MM-DDTHH:MM:SS+/-HH:MM**, the last tag being the timezone offset. For example, +02:00 is CEST, and -05:00 is EST.
 - Strict adherence to UTC and ISO-8601 ensures interoperability among computer systems.
+
+### Timestamps
+- A timestamp is a PostgreSQL data type storing datetime in ISO-8601 format: YYYY-MM-DD HH:MM:SS.MS +/-TZ.
+- A timestamp column initialized as `TIMESTAMP WITHOUT TIME ZONE` disregards timezone information and treats the given datetime as UTC.
+- A timestamp column initialized as `TIMESTAMP WITH TIME ZONE` converts the given datetime to UTC by offsetting the timezone information.
+- We use `DATE` type, if we do not need time info. We use `TIMESTAMP WITHOUT TIME ZONE` type, if we deal with a single timezone. We use `TIMESTAMP WITH TIME ZONE` type, if we deal with multiple timezones.
 
 ## Resources
 

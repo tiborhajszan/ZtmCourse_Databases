@@ -41,6 +41,7 @@
 - Setting Up Timezones
 - How Do We Format Date And Time?
 - Timestamps
+- Date Functions
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -260,6 +261,17 @@ ALTER USER "username" SET timezone='UTC';
 - A timestamp column initialized as `TIMESTAMP WITH TIME ZONE` converts the given datetime to UTC by offsetting the timezone information.
 - We use `DATE` type, if we do not need time info. We use `TIMESTAMP WITHOUT TIME ZONE` type, if we deal with a single timezone. We use `TIMESTAMP WITH TIME ZONE` type, if we deal with multiple timezones.
 
+### Datetime Operators<br><br>
+```sql
+-- getting current date
+SELECT NOW()::date;
+SELECT CURRENT_DATE; --> YYYY-MM-DD
+/* formatting date output (see postgres docs)
+format pattern: DD/MM/YYYY
+format modifiers: D = day, M = month, Y = year, etc... */
+SELECT TO_CHAR(CURRENT_DATE, 'DD/MM/YYYY'); --> 01/01/2000
+```
+
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
@@ -281,11 +293,6 @@ Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyon
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-NULL Coalescing
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/Null%20Values/answers.sql)
-- DB Fiddle [🔗](https://www.db-fiddle.com/f/PnGNcaPYfGoEDvfexzEUA/0)
 
 Three Valued Logic
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/questions.sql)

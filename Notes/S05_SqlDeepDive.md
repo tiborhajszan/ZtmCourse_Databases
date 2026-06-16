@@ -42,6 +42,7 @@
 - How Do We Format Date And Time?
 - Timestamps
 - Date Functions
+- Date Difference And Casting
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -261,15 +262,24 @@ ALTER USER "username" SET timezone='UTC';
 - A timestamp column initialized as `TIMESTAMP WITH TIME ZONE` converts the given datetime to UTC by offsetting the timezone information.
 - We use `DATE` type, if we do not need time info. We use `TIMESTAMP WITHOUT TIME ZONE` type, if we deal with a single timezone. We use `TIMESTAMP WITH TIME ZONE` type, if we deal with multiple timezones.
 
-### Datetime Operators<br><br>
+### Datetime Operators
+- The `NOW()` function returns the current datetime in `TIMESTAMP WITH TIME ZONE` type. To extract the current date, `NOW()` has to be casted to `DATE` type.
+- Subtracting datetimes returns the difference in days hours:minutes:seconds.
+- Casting datetime strings to date type converts the string to ISO-8601 format.
+<br><br>
+
 ```sql
 -- getting current date
-SELECT NOW()::date;
+SELECT NOW()::date; --> YYYY-MM-DD
 SELECT CURRENT_DATE; --> YYYY-MM-DD
 /* formatting date output (see postgres docs)
 format pattern: DD/MM/YYYY
 format modifiers: D = day, M = month, Y = year, etc... */
 SELECT TO_CHAR(CURRENT_DATE, 'DD/MM/YYYY'); --> 01/01/2000
+-- subtracting datetime
+SELECT NOW() - '1800/01/01';
+-- casting to date type
+SELECT date '1800/01/01'; --> 1800-01-01
 ```
 
 ## Resources

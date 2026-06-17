@@ -43,6 +43,7 @@
 - Timestamps
 - Date Functions
 - Date Difference And Casting
+- Age Calculation
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -262,10 +263,12 @@ ALTER USER "username" SET timezone='UTC';
 - A timestamp column initialized as `TIMESTAMP WITH TIME ZONE` converts the given datetime to UTC by offsetting the timezone information.
 - We use `DATE` type, if we do not need time info. We use `TIMESTAMP WITHOUT TIME ZONE` type, if we deal with a single timezone. We use `TIMESTAMP WITH TIME ZONE` type, if we deal with multiple timezones.
 
-### Datetime Operators
-- The `NOW()` function returns the current datetime in `TIMESTAMP WITH TIME ZONE` type. To extract the current date, `NOW()` has to be casted to `DATE` type.
+### Datetime Operators and Functions
+- The `NOW()` function returns the current datetime in `TIMESTAMP WITH TIME ZONE` type. To extract the current date, the output of `NOW()` has to be casted to `DATE` type.
+- The `CURRENT_DATE` attribute holds today's date in `DATE` type.
 - Subtracting datetimes returns the difference in days hours:minutes:seconds.
 - Casting datetime strings to date type converts the string to ISO-8601 format.
+- The `AGE()` function performs a datetime subtraction and returns the difference in years, months, and days. When a single param is given, `AGE()` performs `NOW() - param`. When two params are given, `AGE()` performs `param1 - param2`.
 <br><br>
 
 ```sql
@@ -280,6 +283,9 @@ SELECT TO_CHAR(CURRENT_DATE, 'DD/MM/YYYY'); --> 01/01/2000
 SELECT NOW() - '1800/01/01';
 -- casting to date type
 SELECT date '1800/01/01'; --> 1800-01-01
+-- calculating age
+SELECT AGE(date '1800/01/01'); --> 220 years 4 mons 20 days
+SELECT AGE(date '1992/11/13', date '1800/01/01'); --> 192 years 10 mons 12 days
 ```
 
 ## Resources

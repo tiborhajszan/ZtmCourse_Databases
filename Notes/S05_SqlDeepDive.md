@@ -44,6 +44,7 @@
 - Date Functions
 - Date Difference And Casting
 - Age Calculation
+- Extracting Information
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -269,6 +270,8 @@ ALTER USER "username" SET timezone='UTC';
 - Subtracting datetimes returns the difference in days hours:minutes:seconds.
 - Casting datetime strings to date type converts the string to ISO-8601 format.
 - The `AGE()` function performs a datetime subtraction and returns the difference in years, months, and days. When a single param is given, `AGE()` performs `NOW() - param`. When two params are given, `AGE()` performs `param1 - param2`.
+- `EXTRACT()`: Returns either year, month, or day from a date type.
+- `DATE_TRUNC()`: Rounds the given date | timestamp type to the given year | month | day.
 <br><br>
 
 ```sql
@@ -286,6 +289,12 @@ SELECT date '1800/01/01'; --> 1800-01-01
 -- calculating age
 SELECT AGE(date '1800/01/01'); --> 220 years 4 mons 20 days
 SELECT AGE(date '1992/11/13', date '1800/01/01'); --> 192 years 10 mons 12 days
+-- extracting date parts
+SELECT EXTRACT(YEAR FROM date '1992/11/13'); --> 1992
+SELECT EXTRACT(MONTH FROM date '1992/11/13') --> 11
+-- rounding dates
+SELECT DATE_TRUNC('year', date '1992/11/13'); --> 1992-01-01
+SELECT DATE_TRUNC('month', date '1992/11/13'); --> 1992-11-01
 ```
 
 ## Resources

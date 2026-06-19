@@ -1,6 +1,6 @@
 # Section 05 | SQL Deep Dive
 
-<span style="color: #ED7D31;">**ZtM Academy | Complete SQL + Databases Bootcamp | Zero to Mastery**</span>
+<span style="color: #ED7D31;">**ZtM Academy | Complete SQL and Databases Bootcamp | Zero to Mastery**</span>
 
 #### Lessons
 - Query Along
@@ -45,6 +45,7 @@
 - Date Difference And Casting
 - Age Calculation
 - Extracting Information
+- Intervals
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -272,6 +273,7 @@ ALTER USER "username" SET timezone='UTC';
 - The `AGE()` function performs a datetime subtraction and returns the difference in years, months, and days. When a single param is given, `AGE()` performs `NOW() - param`. When two params are given, `AGE()` performs `param1 - param2`.
 - `EXTRACT()`: Returns either year, month, or day from a date type.
 - `DATE_TRUNC()`: Rounds the given date | timestamp type to the given year | month | day.
+- `INTERVAL 'str'`: Represents a period of time defined by the interval string. Makes it easier to calculate dates/timestamps in the past or ahead of time.
 <br><br>
 
 ```sql
@@ -295,6 +297,9 @@ SELECT EXTRACT(MONTH FROM date '1992/11/13') --> 11
 -- rounding dates
 SELECT DATE_TRUNC('year', date '1992/11/13'); --> 1992-01-01
 SELECT DATE_TRUNC('month', date '1992/11/13'); --> 1992-11-01
+-- operating with intervals
+SELECT date '1992/11/13' - INTERVAL '5 years 2 months 7 days'; --> 1987-09-06
+SELECT date '1992/11/13' + INTERVAL '5 hours 15 minutes'; --> 1992-11-13 05:15:00 
 ```
 
 ## Resources

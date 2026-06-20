@@ -46,6 +46,7 @@
 - Age Calculation
 - Extracting Information
 - Intervals
+- Exercise: Date and Timestamp
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -265,15 +266,17 @@ ALTER USER "username" SET timezone='UTC';
 - A timestamp column initialized as `TIMESTAMP WITH TIME ZONE` converts the given datetime to UTC by offsetting the timezone information.
 - We use `DATE` type, if we do not need time info. We use `TIMESTAMP WITHOUT TIME ZONE` type, if we deal with a single timezone. We use `TIMESTAMP WITH TIME ZONE` type, if we deal with multiple timezones.
 
-### Datetime Operators and Functions
-- The `NOW()` function returns the current datetime in `TIMESTAMP WITH TIME ZONE` type. To extract the current date, the output of `NOW()` has to be casted to `DATE` type.
-- The `CURRENT_DATE` attribute holds today's date in `DATE` type.
-- Subtracting datetimes returns the difference in days hours:minutes:seconds.
-- Casting datetime strings to date type converts the string to ISO-8601 format.
-- The `AGE()` function performs a datetime subtraction and returns the difference in years, months, and days. When a single param is given, `AGE()` performs `NOW() - param`. When two params are given, `AGE()` performs `param1 - param2`.
-- `EXTRACT()`: Returns either year, month, or day from a date type.
-- `DATE_TRUNC()`: Rounds the given date | timestamp type to the given year | month | day.
-- `INTERVAL 'str'`: Represents a period of time defined by the interval string. Makes it easier to calculate dates/timestamps in the past or ahead of time.
+### Date/Time Operators and Functions
+- `NOW()`: Returns the current date and time in `timestamp` type.
+- `NOW()::date`: Casts the return value of `NOW()` to `date` type.
+- `CURRENT_DATE`: Attribute holding today's date in `date` type.
+- `date '1992/11/13'`: Casts the given string to `date` type using ISO-8601 format.
+- `TO_CHAR()`: xXx
+- `date - date`: Date subtraction returns the difference as number of elapsed days in `integer` type.
+- `INTERVAL '10 years 9 months 8 days 7 hours 6 minutes'`: Represents a period of time. Makes it easier to calculate dates and times in the past or ahead of time.
+- `AGE()`: Performs subtraction between the given dates and returns the difference in `interval` type.
+- `DATE_TRUNC()`: Rounds the given `date` type to the required year | month | day.
+- `EXTRACT()`: Returns year | month | day from the given date in `integer` type.
 <br><br>
 
 ```sql
@@ -323,10 +326,6 @@ Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyon
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-Three Valued Logic
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/3%20Valued%20Logic%20Exercises/answers.sql)
 
 BETWEEN + AND
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/questions.sql)

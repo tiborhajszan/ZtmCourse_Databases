@@ -47,6 +47,7 @@
 - Extracting Information
 - Intervals
 - Exercise: Date and Timestamp
+- DISTINCT
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -280,6 +281,8 @@ ALTER USER "username" SET timezone='UTC';
 <br><br>
 
 ```sql
+-- selecting current date and time
+SELECT NOW(); --> YYYY-MM-DD HH:MM:SS
 -- getting current date
 SELECT NOW()::date; --> YYYY-MM-DD
 SELECT CURRENT_DATE; --> YYYY-MM-DD
@@ -303,6 +306,17 @@ SELECT DATE_TRUNC('month', date '1992/11/13'); --> 1992-11-01
 -- operating with intervals
 SELECT date '1992/11/13' - INTERVAL '5 years 2 months 7 days'; --> 1987-09-06
 SELECT date '1992/11/13' + INTERVAL '5 hours 15 minutes'; --> 1992-11-13 05:15:00 
+```
+
+### DISTINCT Keyword
+- `DISTINCT "column"`: Returns all unique values from the given column.
+- `DISTINCT "column1", "column2"`: Returns all unique value combinations from the given columns.<br><br>
+
+```sql
+-- selecting unique values from single column
+SELECT DISTINCT "column" FROM "schema"."table";
+-- selecting unique value combinations from multiple columns
+SELECT DISTINCT "column1", "column2" FROM "schema"."table";
 ```
 
 ## Resources

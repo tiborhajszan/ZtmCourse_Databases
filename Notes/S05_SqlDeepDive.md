@@ -1,7 +1,7 @@
 # Section 05 | SQL Deep Dive
 
 <span style="color: #ED7D31;">**ZtM Academy | Complete SQL and Databases Bootcamp | Zero to Mastery**</span>
-
+<br><br>
 #### Lessons
 - Query Along
 - Starting With Query
@@ -48,6 +48,7 @@
 - Intervals
 - Exercise: Date and Timestamp
 - DISTINCT
+- Exercise: Distinct Keyword
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -57,7 +58,7 @@
 
 ### Data Retrieval
 - **Role of DQL:** The Data Query Language is centered around the `SELECT` statement, which is the most frequently used command in SQL.
-- **Purpose of `SELECT`:** The primary purpose of the `SELECT` statement is to retrieve data from a database without changing the underlying data.
+- `SELECT`: Retrieves information from a database without changing the underlying data.
 
 ### SELECT Keyword
 ```sql
@@ -340,10 +341,6 @@ Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyon
 ## Exercises
 
 <div style="color: navajowhite; font-weight: bold;">
-
-BETWEEN + AND
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/BETWEEN%20%2B%20AND/answers.sql)
 
 IN Keyword
 - Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/IN/questions.sql)

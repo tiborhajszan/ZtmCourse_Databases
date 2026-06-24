@@ -1,7 +1,7 @@
+<span style="color: #ED7D31;">**ZtM Academy | Complete SQL and Databases Bootcamp | Zero to Mastery**</span>
+
 # Section 05 | SQL Deep Dive
 
-<span style="color: #ED7D31;">**ZtM Academy | Complete SQL and Databases Bootcamp | Zero to Mastery**</span>
-<br><br>
 #### Lessons
 - Query Along
 - Starting With Query
@@ -49,6 +49,7 @@
 - Exercise: Date and Timestamp
 - DISTINCT
 - Exercise: Distinct Keyword
+- Sorting Data
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -74,24 +75,25 @@ SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 - **Aggregate Functions:** Combine multiple records (e.g., all values in a column) and return a single aggregated value (e.g., `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`).
 - **Scalar Functions:** Like the `map()` function in Python, they operate on each record individually and return multiple corresponding values (e.g., `CONCAT()`, `LENGTH()`, `UPPER()`).
 
+### Aggregate Functions<br><br>
+
+```sql
+-- calculating sum of field/column
+SELECT SUM("column") FROM "schema"."table";
+-- counting total number of records in field/column
+SELECT COUNT("column") FROM "schema"."table";
+-- calculating average of field/column
+SELECT AVG("column") FROM "schema"."table";
+-- finding minimum value in field/column
+SELECT MIN("column") FROM "schema"."table";
+-- finding maximum value in field/column
+SELECT MAX("column") FROM "schema"."table";
+```
+
 ### CONCAT() Function
 ```sql
 -- concatenating columns
 SELECT CONCAT("column1", ' ', "column2") AS "concatenated_column" FROM "schema"."table";
-```
-
-### Aggregate Functions
-```sql
--- calculating the sum of a set of values
-SELECT SUM("column") FROM "schema"."table";
--- counting the total number of records in a column
-SELECT COUNT("column") FROM "schema"."table";
--- calculating the average of a set of values
-SELECT AVG("column") FROM "schema"."table";
--- finding the minimum value in a set of values
-SELECT MIN("column") FROM "schema"."table";
--- finding the maximum value in a set of values
-SELECT MAX("column") FROM "schema"."table";
 ```
 
 ### SQL Comments
@@ -318,6 +320,24 @@ SELECT date '1992/11/13' + INTERVAL '5 hours 15 minutes'; --> 1992-11-13 05:15:0
 SELECT DISTINCT "column" FROM "schema"."table";
 -- selecting unique value combinations from multiple columns
 SELECT DISTINCT "column1", "column2" FROM "schema"."table";
+```
+
+### Sorting Records
+- `GROUP BY`: Sorts records by values from the given column(s) or expression(s).
+- `ASC`: Sorts in ascending order. Default when sorting order is not specified.
+- `DESC`: Sorts in descending order.
+- **Multiple Column Sort:** First sorts by column1, then sorts identical values further by column2.
+<br><br>
+
+```sql
+-- sorting in ascending order (default)
+SELECT * FROM "schema"."table" ORDER BY "column";
+-- sorting in descending order
+SELECT * FROM "schema"."table" ORDER BY "column" DESC;
+-- sorting by expression
+SELECT * FROM "schema"."table" ORDER BY LENGTH("column");
+-- sorting by multiple columns
+SELECT * FROM "schema"."table" ORDER BY "column1", "column2" DESC; -- column1 is ASC
 ```
 
 ## Resources

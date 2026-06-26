@@ -50,6 +50,7 @@
 - DISTINCT
 - Exercise: Distinct Keyword
 - Sorting Data
+- Exercise Sorting Data
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -72,7 +73,7 @@ SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 ```
 
 ### SQL Functions
-- **Aggregate Functions:** Combine multiple records (e.g., all values in a column) and return a single aggregated value (e.g., `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`).
+- **Aggregate Functions:** Take multiple records (e.g., all values in a column) and compute a single aggregated value from them.
 - **Scalar Functions:** Like the `map()` function in Python, they operate on each record individually and return multiple corresponding values (e.g., `CONCAT()`, `LENGTH()`, `UPPER()`).
 
 ### Aggregate Functions<br><br>
@@ -80,7 +81,7 @@ SELECT "column1" AS "alias1", "column2" AS "alias2" FROM "schema"."table";
 ```sql
 -- calculating sum of field/column
 SELECT SUM("column") FROM "schema"."table";
--- counting total number of records in field/column
+-- counting number of records in field/column
 SELECT COUNT("column") FROM "schema"."table";
 -- calculating average of field/column
 SELECT AVG("column") FROM "schema"."table";
@@ -362,9 +363,8 @@ Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyon
 
 <div style="color: navajowhite; font-weight: bold;">
 
-IN Keyword
-- Questions [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/IN/questions.sql)
-- Answers [🔗](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery/blob/master/SQL%20Deep%20Dive/IN/answers.sql)
+
+
 </div>
 
 ---

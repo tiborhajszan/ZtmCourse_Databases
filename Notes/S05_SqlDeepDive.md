@@ -51,6 +51,7 @@
 - Exercise: Distinct Keyword
 - Sorting Data
 - Exercise Sorting Data
+- Multi Table SELECT
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -339,6 +340,21 @@ SELECT * FROM "schema"."table" ORDER BY "column" DESC;
 SELECT * FROM "schema"."table" ORDER BY LENGTH("column");
 -- sorting by multiple columns
 SELECT * FROM "schema"."table" ORDER BY "column1", "column2" DESC; -- column1 is ASC
+```
+
+### Selecting from Multiple Tables
+- **Multi-Table `SELECT`:** A simple way of combining columns from multiple tables.
+- **Uncontrolled Permutations:** A simple multi-table `SELECT` returns all possible permiutations of values found in the selected columns.
+- **Permutation Filter:** Accepts permutations only with matching primary and foreign keys.
+- **Join:** Advanced way of combining columns from two or more tables.
+- **Controlled Permutations:** Joins are done with columns that can map/link to one another. The most common approach is to link primary key to foreign key.
+<br><br>
+
+```sql
+-- multi-table select with permutation filter
+SELECT "alias1"."column1", "alias2"."column2"
+FROM "schema"."table1" AS "alias1", "schema"."table2" AS "alias2"
+WHERE "alias1"."primary" = "alias2"."foreign";
 ```
 
 ## Resources

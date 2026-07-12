@@ -52,6 +52,7 @@
 - Sorting Data
 - Exercise Sorting Data
 - Multi Table SELECT
+- Inner Join
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -355,6 +356,38 @@ SELECT * FROM "schema"."table" ORDER BY "column1", "column2" DESC; -- column1 is
 SELECT "alias1"."column1", "alias2"."column2"
 FROM "schema"."table1" AS "alias1", "schema"."table2" AS "alias2"
 WHERE "alias1"."primary" = "alias2"."foreign";
+```
+
+### Inner Joins
+- An inner join is basically an AND filter, comparing columns from different tables, and returning only matching records.
+- Inner joins can be based on multiple conditions and/or combine multiple tables using logical operators (AND, OR, NOT).
+- Joins return unsorted records - always perform `ORDER BY` with joins.
+```sql
+SELECT "main"."column1", "join"."column2"
+FROM "schema"."table1" AS "main"
+INNER JOIN "schema"."table2" AS "join"
+    ON "main"."primary" = "join"."foreign"
+    AND {condition}
+ORDER BY "main"."primary" ASC;
+```
+
+### Inner Joins
+- **Definition:** An inner join acts like a logical `AND` filter between tables, returning only the records where the specified fields (columns) match in both tables.
+- **Complex Conditions:** Joins can evaluate multiple matching criteria using logical operators (`AND`, `OR`, `NOT`).
+- **Multi-Table:** Inner joins can be chained to connect three or more tables.
+* **Sorting:** Joins return records in an unsorted, non-deterministic order by default, so an `ORDER BY` clause should always be included.
+```sql
+SELECT 
+    "c"."customer_id", 
+    "c"."name", 
+    "o"."order_id", 
+    "o"."total_amount"
+FROM "sales"."customers" AS "c"
+INNER JOIN "sales"."orders" AS "o"
+    ON "c"."customer_id" = "o"."customer_id"
+    AND "o"."status" = 'Completed'
+    AND "o"."total_amount" >= 500.00
+ORDER BY "o"."total_amount" DESC;
 ```
 
 ## Resources

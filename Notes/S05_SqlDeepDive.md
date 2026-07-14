@@ -53,6 +53,7 @@
 - Exercise Sorting Data
 - Multi Table SELECT
 - Inner Join
+- Self Join
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -359,24 +360,12 @@ WHERE "alias1"."primary" = "alias2"."foreign";
 ```
 
 ### Inner Joins
-- An inner join is basically an AND filter, comparing columns from different tables, and returning only matching records.
-- Inner joins can be based on multiple conditions and/or combine multiple tables using logical operators (AND, OR, NOT).
-- Joins return unsorted records - always perform `ORDER BY` with joins.
-```sql
-SELECT "main"."column1", "join"."column2"
-FROM "schema"."table1" AS "main"
-INNER JOIN "schema"."table2" AS "join"
-    ON "main"."primary" = "join"."foreign"
-    AND {condition}
-ORDER BY "main"."primary" ASC;
-```
-
-### Inner Joins
-- **Definition:** An inner join acts like a logical `AND` filter between tables, returning only the records where the specified fields (columns) match in both tables.
-- **Complex Conditions:** Joins can evaluate multiple matching criteria using logical operators (`AND`, `OR`, `NOT`).
-- **Multi-Table:** Inner joins can be chained to connect three or more tables.
+- **Definition:** An inner join acts like a logical `AND` operator between tables, returning only the records where the specified fields (columns) match in both tables.
+- **Multiple Conditions:** Joins can evaluate multiple conditions that are chained with logical operators (`AND`, `OR`, `NOT`).
+- **Multiple Tables:** Inner joins can themselves be chained to connect three or more tables.
 * **Sorting:** Joins return records in an unsorted, non-deterministic order by default, so an `ORDER BY` clause should always be included.
 ```sql
+-- multiple condition inner join example
 SELECT 
     "c"."customer_id", 
     "c"."name", 
@@ -386,8 +375,23 @@ FROM "sales"."customers" AS "c"
 INNER JOIN "sales"."orders" AS "o"
     ON "c"."customer_id" = "o"."customer_id"
     AND "o"."status" = 'Completed'
-    AND "o"."total_amount" >= 500.00
+    AND 500.00 <= "o"."total_amount"
 ORDER BY "o"."total_amount" DESC;
+```
+
+### Self Joins
+- **Definition:** A self join is a specific inner join in which a table is joined with **itself**. It is incredibly useful for querying hierarchical data (e.g., finding which employee reports to which manager within the same staff table) or comparing rows within the same table.
+Because the same table is referenced twice, **aliases must be used** in the query so the database engine can tell them apart.
+- **Table Criteria:** For a self join to model relationships (like hierarchies), the table must contain a **unary relationship**. This means the table has a foreign key column (e.g., `manager_id`) that references the primary key column (e.g., `employee_id`) within that very same table.
+```sql
+-- retrieving employees and their direct managers
+SELECT 
+    "emp"."employee_id",
+    "emp"."name" AS "employee_name",
+    "mgr"."name" AS "manager_name"
+FROM "staff" AS "emp"
+INNER JOIN "staff" AS "mgr" 
+    ON "emp"."manager_id" = "mgr"."employee_id";
 ```
 
 ## Resources

@@ -54,6 +54,7 @@
 - Multi Table SELECT
 - Inner Join
 - Self Join
+- Outer Join
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -380,8 +381,7 @@ ORDER BY "o"."total_amount" DESC;
 ```
 
 ### Self Joins
-- **Definition:** A self join is a specific inner join in which a table is joined with **itself**. It is incredibly useful for querying hierarchical data (e.g., finding which employee reports to which manager within the same staff table) or comparing rows within the same table.
-Because the same table is referenced twice, **aliases must be used** in the query so the database engine can tell them apart.
+- **Definition:** A self join is a specific inner join in which a table is joined with **itself**. It is incredibly useful for querying hierarchical data (e.g., finding which employee reports to which manager within the same staff table) or comparing rows within the same table. Because the same table is referenced twice, **aliases must be used** in the query so the database engine can tell them apart.
 - **Table Criteria:** For a self join to model relationships (like hierarchies), the table must contain a **unary relationship**. This means the table has a foreign key column (e.g., `manager_id`) that references the primary key column (e.g., `employee_id`) within that very same table.
 ```sql
 -- retrieving employees and their direct managers
@@ -392,6 +392,24 @@ SELECT
 FROM "staff" AS "emp"
 INNER JOIN "staff" AS "mgr" 
     ON "emp"."manager_id" = "mgr"."employee_id";
+```
+
+### Outer Joins
+- **Outer Joins Overview:** These joins retrieve records that match the specified condition from both tables, as well as non-matching records from one of the tables depending on the direction of the join.
+* **Left (Outer) Joins:** This join returns all records from the left (FROM) table, and only those records from the right (JOIN) table that match the specified condition.
+* **Left Join Behavior:** If there is no match in the right (JOIN) table for a row in the left (FROM) table, the resulting columns from the right (JOIN) table will contain **NULL** values.
+* **Right (Outer) Joins:** This join returns all records from the right (JOIN) table, and only those records from the left (FROM) table that match the specified condision..
+* **Right Join Behavior:** If there is no match in the left (FROM) table for a row in the right (JOIN) table, the resulting columns from the left (FROM) table will contain **NULL** values.
+* **Key Concept:** Left and Right joins are functionally identical if you swap the table order in your `FROM` and `JOIN` clauses, but Left Joins are much more commonly used in practice for readability.
+```sql
+-- left join code example
+SELECT 
+    "customers"."customer_id", 
+    "customers"."customer_name", 
+    "orders"."order_id"
+FROM "customers" -- left table
+LEFT JOIN "orders" -- right table
+    ON "customers"."customer_id" = "orders"."customer_id";
 ```
 
 ## Resources

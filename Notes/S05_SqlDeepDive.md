@@ -55,6 +55,7 @@
 - Inner Join
 - Self Join
 - Outer Join
+- Less Common Joins
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.
@@ -412,6 +413,57 @@ LEFT JOIN "orders" -- right table
     ON "customers"."customer_id" = "orders"."customer_id";
 ```
 
+### Less Common Joins
+- **Cross Join:** Returns the Cartesian product of the left table and the right table, pairing every single row from the left table with every singlre row from the right table.
+- **Full Outer Join:** Returns all records when there is a match in either the left table or the right table, filling in `NULL` for missing matches on either side.
+
+```sql
+-- left table: employees
+-- +----+-------+---------+
+-- | id | name  | dept_id |
+-- +----+-------+---------+
+-- | 1  | Alice | 10      |
+-- | 2  | Bob   | 20      |
+-- +----+-------+---------+
+
+-- right table: departments
+-- +---------+-----------+
+-- | dept_id | dept_name |
+-- +---------+-----------+
+-- | 10      | HR        |
+-- | 30      | IT        |
+-- +---------+-----------+
+
+-- cross join code example
+SELECT employees.name, departments.dept_name
+FROM employees
+CROSS JOIN departments;
+
+-- cross join outcome
+-- +-------+-----------+
+-- | name  | dept_name |
+-- +-------+-----------+
+-- | Alice | HR        |
+-- | Alice | IT        |
+-- | Bob   | HR        |
+-- | Bob   | IT        |
+-- +-------+-----------+
+
+-- full outer join code example
+SELECT employees.name, departments.dept_name
+FROM employees
+FULL OUTER JOIN departments 
+  ON employees.dept_id = departments.dept_id;
+
+-- full outer join outcome
+-- +-------+-----------+
+-- | name  | dept_name |
+-- +-------+-----------+
+-- | Alice | HR        |
+-- | Bob   | NULL      |
+-- | NULL  | IT        |
+-- +-------+-----------+
+```
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
@@ -428,13 +480,9 @@ PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12
 
 Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
 
-</div>
+Less Common Joins > Lesson Data [🔗](https://www.db-fiddle.com/f/dAb6mjWqWay6ECY1o2v478/0)
 
-## Exercises
-
-<div style="color: navajowhite; font-weight: bold;">
-
-
+Resource [🔗]()
 
 </div>
 

@@ -9,7 +9,7 @@
 - Changing Column Names in a SELECT Query
 - Concat Function
 - What Is A Function In SQL?
-- Aggregate Functions
+- +++Aggregate Functions
 - Exercise: Aggregate Functions
 - Commenting Your Queries
 - Common SELECT Mistakes
@@ -56,6 +56,7 @@
 - Self Join
 - Outer Join
 - Less Common Joins
+- Exercise: Inner-Join
 
 ### SQL Command Categories
 - **DCL** (Data Control Language) for managing permissions.

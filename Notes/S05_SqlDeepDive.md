@@ -11,14 +11,14 @@
 - What Is A Function In SQL?
 - Aggregate Functions
 - Exercise: Aggregate Functions
-- >> Commenting Your Queries
+- Commenting Your Queries
 - Common SELECT Mistakes
 - Filtering Data
 - AND and OR
 - Exercise: Filtering Data
 - The NOT Keyword
 - Exercise: The Where Clause
-- Comparison Operators
+- >> Comparison Operators
 - Exercise: Comparison Operators
 - Logical Operators
 - Operator Precedence
@@ -57,6 +57,7 @@
 - Outer Join
 - Less Common Joins
 - Exercise: Inner-Join
+- USING Keyword
 - Implement a New Life System
 
 ### SQL Command Categories
@@ -466,6 +467,35 @@ FULL OUTER JOIN departments
 -- | NULL  | IT        |
 -- +-------+-----------+
 ```
+
+### Keyword `USING()`
+- **Definition:** Shorthand keyword used in simple primary key to foreign key `JOIN` operations to link tables when **both tables share the exact same column name**. It replaces the longer `ON table1.column = table2.column` syntax.
+
+```sql
+-- left table: players
+-- player_id | player_name | team_id
+-- ----------|-------------|--------
+-- 1         | Alice       | 10
+-- 2         | Bob         | 20
+
+-- right table: teams
+-- team_id | team_name
+-- --------|----------
+-- 10      | Wildcats
+-- 20      | Tigers
+
+-- USING() code example
+SELECT "players"."player_name", "teams"."team_name"
+FROM "players"
+INNER JOIN "teams" USING ("team_id");
+
+-- code outcome
+-- player_name  | team_name
+-- -------------|----------
+-- Alice        | Wildcats
+-- Bob          | Tigers
+```
+
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">

@@ -1,22 +1,20 @@
-# Section 03 | Databases + SQL Fundamentals
+<span style="color: #ED7D31;">**ZtM Academy | Complete SQL and Databases Bootcamp | Zero to Mastery**</span>
 
-<span style="color: #ED7D31;">**ZtM Academy | Complete SQL And Databases Bootcamp | Zero to Mastery**</span>
+# Section 03 | Databases + SQL Fundamentals
 
 #### Lessons
 - SQL Playground
 - What Is SQL?
-- What Is A Query?
+- *** What Is A Query?
 - Exercise: Setting Up Your First Database
 - Imperative vs Declarative
 - History of SQL
 - Exercises: The Select Statement
-- Optional: History of SQL Deep Dive
+- *** Optional: History of SQL Deep Dive
 - SQL Standards
 - What Is A Database? Revisited
 - Database Oriented Approach
-
-### [Db-Fiddle](https://www.db-fiddle.com/)
-<span style="color: #3c9dff;">An SQL playground and online database management system.</span>
+- Exercise: SQL Starter Quiz
 
 ### What Is SQL?
 SQL (Structured Query Language) is the standard programming language used to manage, manipulate, and retrieve data stored in relational database management systems. Most modern relational databases, such as PostgreSQL, MySQL, and SQL Server, use SQL as their primary interface.
@@ -68,6 +66,26 @@ Standardization is the process of establishing a common set of technical rules, 
 - **Role of SQL:** SQL serves as the standardized language that allows both humans and applications to communicate with the DBMS, providing a consistent way to query and manipulate data regardless of the underlying database system.
 - **Decoupling Data from Applications:** This approach separates the data storage logic from the application code, allowing database engineers to optimize storage and application developers to focus on features without worrying about data management.
 
-## Lesson Title
+## Resources
+
+<div style="color: navajowhite; font-weight: bold;">
+
+Db-Fiddle | online database management system [🔗](https://www.db-fiddle.com/)
+
+Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
+
+PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/docs/current/functions-comparison.html)
+
+PostgreSQL Operator Precedence [🔗](https://www.postgresql.org/docs/12/sql-syntax-lexical.html#SQL-PRECEDENCE)
+
+PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12/sql-expressions.html#SYNTAX-EXPRESS-EVAL)
+
+Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
+
+Less Common Joins > Lesson Data [🔗](https://www.db-fiddle.com/f/dAb6mjWqWay6ECY1o2v478/0)
+
+Resource [🔗]()
+
+</div>
 
 ---

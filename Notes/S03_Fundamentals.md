@@ -15,9 +15,12 @@
 - What Is A Database? Revisited
 - Database Oriented Approach
 - Exercise: SQL Starter Quiz
+- Database Models
 
 ### What Is SQL?
-SQL (Structured Query Language) is the standard programming language used to manage, manipulate, and retrieve data stored in relational database management systems. Most modern relational databases, such as PostgreSQL, MySQL, and SQL Server, use SQL as their primary interface.
+- **Structured Query Language (SQL):** Standard coding language used to manage, manipulate, and retrieve data stored in relational database management systems (RDBMS).
+- **Common Language:** Most modern relational databases, such as **PostgreSQL**, **MySQL**, and **Microsoft SQL Server**, have adopted SQL as their core interface for interacting with data.
+- **Key Takeaway:** SQL acts as the universal bridge between users and relational databases, allowing users to create tables, query specific rows, and update or delete records seamlessly.
 
 ### What Is a Database?
 A database is an organized collection of structured information, or data, which allows efficient storage, modification, and retrieval of large volumes of information across various applications. It is managed by a Database Management System (DBMS), which serves as the software interface for interacting with the data.
@@ -50,8 +53,6 @@ The journey of computerized data management began in the mid-1960s with the tran
 
 ### [W3 Schools > SQL Exercises](https://www.w3schools.com/sql/sql_exercises.asp)
 
-### [YouTube > History of Databases](https://www.youtube.com/watch?v=KG-mqHoXOXY)
-
 ### SQL Standardization
 Standardization is the process of establishing a common set of technical rules, known as standards, to ensure that different systems can work together reliably. In the context of SQL, official standards are maintained by organizations like ANSI and ISO to provide a consistent blueprint for the language across different database vendors. While these standards ensure core portability, many vendors add proprietary extensions—often called dialects—to provide specialized functionality that goes beyond the official requirements.
 
@@ -66,13 +67,19 @@ Standardization is the process of establishing a common set of technical rules, 
 - **Role of SQL:** SQL serves as the standardized language that allows both humans and applications to communicate with the DBMS, providing a consistent way to query and manipulate data regardless of the underlying database system.
 - **Decoupling Data from Applications:** This approach separates the data storage logic from the application code, allowing database engineers to optimize storage and application developers to focus on features without worrying about data management.
 
+### Database Models
+- **Definition:** Database models are structural frameworks that define how data is stored, organized, and manipulated in a database.
+* **Hierarchical Model:** Organized data in a strict **tree structure** (parent-child), creating the groundwork for structured data storage and one-to-many relationships.
+* **Network Model:** Expanded the tree structure into a **graph** (multi-parent), introducing the concept of many-to-many relationsgips and set theory.
+* **Relational Model:** Built directly on the lessons of these historical models—retaining their core relationship concepts while replacing rigid, hardcoded paths with flexible tables and SQL.
+* **Key Takeaway:** Historical models laid the essential conceptual foundation for data relationships, but the Relational Model perfected them by making data much simpler to organize and query.
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
 
 Db-Fiddle | online database management system [🔗](https://www.db-fiddle.com/)
 
-Code Commenting Best Practices [🔗](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
+YouTube > History of Databases [🔗](https://www.youtube.com/watch?v=KG-mqHoXOXY)
 
 PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/docs/current/functions-comparison.html)
 

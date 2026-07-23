@@ -3,8 +3,8 @@
 # Section 04 | Environment Setup
 
 #### Lessons
-- Why PostgreSQL
-- Environment Tooling
+- *** Why PostgreSQL
+- *** Environment Tooling
 - Having Trouble Registering A Serial Key For ValentinaDB?
 - SQL Tooling Alternatives
 - Command Line 101
@@ -15,10 +15,10 @@
 - **Command Line:** Built-in text interface (TUI) for database management.
 
 ### PostgreSQL Setup
-- URL: localhost (127.0.0.1)
-- Port: 5432
-- Username: postgres
-- Password: your_password
+- **URL:** localhost (127.0.0.1)
+- **Port:** 5432
+- **Username:** postgres
+- **Password:** {your_password}
 
 ### Command Line
 - **Text User Interface (TUI):** Enables pure text-based communication with the operating system, commonly called the Command Line (Windows) or Terminal (Mac/Linux).
@@ -29,9 +29,10 @@
 
 <div style="color: navajowhite; font-weight: bold;">
 
-EnterpriseDB > PostgreSQL [🔗](https://www.enterprisedb.com/)
+Enterprise-DB > PostgreSQL [🔗](https://www.enterprisedb.com/)
 
-### [Valentina Studio](https://www.valentina-db.com/en/)
+Valentina-DB > Valentina Studio [🔗](https://www.valentina-db.com/en/)
+
 <span style="color: #3c9dff;"></span>
 
 ### [Valentina Studio > Obtaining Licenses](https://valentina-db.com/en/get-free-valentina-studio)

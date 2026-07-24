@@ -16,6 +16,7 @@
 - Database Oriented Approach
 - Exercise: SQL Starter Quiz
 - Database Models
+- Hierarchical And Networking Model
 
 ### What Is SQL?
 - **Structured Query Language (SQL):** Standard coding language used to manage, manipulate, and retrieve data stored in relational database management systems (RDBMS).
@@ -23,7 +24,10 @@
 - **Key Takeaway:** SQL acts as the universal bridge between users and relational databases, allowing users to create tables, query specific rows, and update or delete records seamlessly.
 
 ### What Is a Database?
-A database is an organized collection of structured information, or data, which allows efficient storage, modification, and retrieval of large volumes of information across various applications. It is managed by a Database Management System (DBMS), which serves as the software interface for interacting with the data.
+- **Database Definition:** An organized collection of structured data designed for efficient storage, modification, and retrieval of information across applications.
+- **Scalability:** Databases handle large volumes of information far more effectively than static files or spreadsheets.
+- **Database Management System (DBMS):** A software that manages database operations and provides an interface for interacting with the stored data.
+- **Common Examples:** Popular DBMS platforms include **PostgreSQL**, **MySQL**, **Microsoft SQL Server**, and **Oracle**.
 
 ### What Is a Query?
 An **SQL query** is a specific **SQL statement** designed to manipulate or retrieve data. It uses **clauses** (query parts) to provide structure. Each clause begins with a **keyword** (like `SELECT`) and **identifiers** represent the names of tables or columns. Furthermore, **expressions** and **conditions** are used for **filtering** the dataset to return only the relevant rows.
@@ -69,10 +73,24 @@ Standardization is the process of establishing a common set of technical rules, 
 
 ### Database Models
 - **Definition:** Database models are structural frameworks that define how data is stored, organized, and manipulated in a database.
-* **Hierarchical Model:** Organized data in a strict **tree structure** (parent-child), creating the groundwork for structured data storage and one-to-many relationships.
-* **Network Model:** Expanded the tree structure into a **graph** (multi-parent), introducing the concept of many-to-many relationsgips and set theory.
-* **Relational Model:** Built directly on the lessons of these historical models—retaining their core relationship concepts while replacing rigid, hardcoded paths with flexible tables and SQL.
-* **Key Takeaway:** Historical models laid the essential conceptual foundation for data relationships, but the Relational Model perfected them by making data much simpler to organize and query.
+- **Hierarchical Model:** It was mainly used by IBM in the '60s and '70s. It organizes data in a strict **tree structure** (parent-child, one-to-many relationships), creating the groundwork for structured data storage.
+- **Network Model:** Expands the tree structure into a **graph** (multi-parent, many-to many relationships), introducing the concept of set theory.
+- **Relational Model:** Built directly on the lessons of these historical models—retaining their core relationship concepts while replacing rigid, hardcoded paths with flexible tables and SQL.
+- **Key Takeaway:** Historical models laid the essential conceptual foundation for data relationships, but the Relational Model perfected them by making data much simpler to organize and query.
+
+### Hierarchical Model
+- **Structure:** Organizes data into a top-down tree structure representing one-to-many relationships.
+- **Parent-Child Rules:** Parents can have multiple children, but each child node must have exactly one parent.
+- **Real-World Alignment:** Ideal for modeling naturally hierarchical real-world data, such as file systems or XML files.
+- **Tight Coupling:** Deleting a parent node automatically deletes all of its connected child nodes.
+- **Major Limitation:** Lacks support for many-to-many relationships, as parents cannot share the same child node.
+
+### Network Model
+- **Structure:** Organizes data using a flexible graph structure to represent many-to-many relationships.
+- **Parent-Child Rules:** Parents can have multiple children, and children can have multiple parents.
+- **Relationship Tracking:** Explicit links define connections—such as child nodes in an XML document referencing their parents.
+- **Major Limitation:** Removing a parent node requires manually updating or cleaning up references across all related records.
+
 ## Resources
 
 <div style="color: navajowhite; font-weight: bold;">
@@ -80,17 +98,7 @@ Standardization is the process of establishing a common set of technical rules, 
 Db-Fiddle | online database management system [🔗](https://www.db-fiddle.com/)
 
 YouTube > History of Databases [🔗](https://www.youtube.com/watch?v=KG-mqHoXOXY)
-
-PostgreSQL Comparison Operators And Functions [🔗](https://www.postgresql.org/docs/current/functions-comparison.html)
-
-PostgreSQL Operator Precedence [🔗](https://www.postgresql.org/docs/12/sql-syntax-lexical.html#SQL-PRECEDENCE)
-
-PostgreSQL Expression Evaluation Order [🔗](https://www.postgresql.org/docs/12/sql-expressions.html#SYNTAX-EXPRESS-EVAL)
-
-Blog Post About UTC [🔗](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
-
-Less Common Joins > Lesson Data [🔗](https://www.db-fiddle.com/f/dAb6mjWqWay6ECY1o2v478/0)
-
+<br><br>
 Resource [🔗]()
 
 </div>
